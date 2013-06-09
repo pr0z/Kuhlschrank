@@ -18,7 +18,7 @@ namespace Kuhlschrank.Views
     /// <summary>
     /// Interaction logic for MenuView.xaml
     /// </summary>
-    public partial class MenuView : Window
+    public partial class MenuView : UserControl
     {
         private MenuViewModel viewModel { get; set; }
 

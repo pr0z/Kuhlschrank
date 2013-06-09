@@ -1,4 +1,5 @@
-﻿using Kuhlschrank.ViewModels;
+﻿using Common;
+using Kuhlschrank.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,14 +19,14 @@ namespace Kuhlschrank.Views
     /// <summary>
     /// Interaction logic for LoginView.xaml
     /// </summary>
-    public partial class LoginView : Window
+    public partial class LoginView : UserControl
     {
         private LoginViewModel viewModel { get; set; }
 
-        public LoginView()
+        public LoginView(ApplicationContext context)
         {
             InitializeComponent();
-            viewModel = new LoginViewModel();
+            viewModel = new LoginViewModel(context);
             this.DataContext = viewModel;
         }
     }

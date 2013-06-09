@@ -8,5 +8,9 @@ namespace Kuhlschrank.ViewModels
 {
     public class MenuViewModel
     {
+        public MenuViewModel()
+        {
+            
+        }
     }
 }

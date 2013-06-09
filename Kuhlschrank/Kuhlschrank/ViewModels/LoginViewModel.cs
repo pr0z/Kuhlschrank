@@ -1,5 +1,6 @@
 ﻿using Common;
 using Crud;
+using Kuhlschrank.Views;
 using Microsoft.Practices.Prism.Commands;
 using System;
 using System.Collections.Generic;
@@ -57,10 +58,10 @@ namespace Kuhlschrank.ViewModels
         #endregion
 
         #region CONSTRUCTOR
-        public LoginViewModel()
+        public LoginViewModel(ApplicationContext context)
         {
             CheckUserPasswordCommand = new DelegateCommand(CheckUserPassword, CanCheckUserPassword);
-            Context = new ApplicationContext();
+            Context = context;
         }
         #endregion
 
@@ -98,6 +99,8 @@ namespace Kuhlschrank.ViewModels
                 {
                     message = "Vous êtes connecté !";
                     Context.ApplicationUser = user;
+                    MenuView menu = new MenuView();
+                    this.Context.HostWindow.Content = menu;
                 }
             }
             System.Windows.MessageBox.Show(message);

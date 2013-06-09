@@ -1,0 +1,7 @@
+D:\Dev Cours\Kuhlschrank\Common\bin\Debug\Common.dll
+D:\Dev Cours\Kuhlschrank\Common\bin\Debug\Common.pdb
+D:\Dev Cours\Kuhlschrank\Common\obj\Debug\Common.dll
+D:\Dev Cours\Kuhlschrank\Common\obj\Debug\Common.pdb
+D:\Dev Cours\Kuhlschrank\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\Dev Cours\Kuhlschrank\Common\bin\Debug\DataContracts.dll
+D:\Dev Cours\Kuhlschrank\Common\bin\Debug\DataContracts.pdb

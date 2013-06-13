@@ -18,7 +18,7 @@ namespace Crud
 
         }
 
-        public USERSbo GetUserFromIdAndPassword(string identifier, string password)
+        public User GetUserFromIdAndPassword(string identifier, string password)
         {
             SqlCommand cmd = new SqlCommand("select * from USERS where USERS_MAIL = '"+identifier+"'", base.Connection);
             using (IDataReader reader = cmd.ExecuteReader())
@@ -30,14 +30,14 @@ namespace Crud
                     return null;
             }
         }
-        
-        public List<USERSbo> MapUSERSbo(IDataReader dataReader)
+
+        public List<User> MapUSERSbo(IDataReader dataReader)
         {
-            List<USERSbo> list = new List<USERSbo>();
+            List<User> list = new List<User>();
 
             while (dataReader.Read())
             {
-                USERSbo user = new USERSbo()
+                User user = new User()
                 {
                     Id = Tools.ChangeType<int>(dataReader["USERS_ID"]),
                     Nom = Tools.ChangeType<string>(dataReader["USERS_NOM"]),

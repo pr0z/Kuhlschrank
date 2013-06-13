@@ -10,7 +10,7 @@ namespace Common
 {
     public class ApplicationContext
     {
-        public USERSbo ApplicationUser { get; set; }
+        public User ApplicationUser { get; set; }
         public Window HostWindow { get; set; }
     }
 }

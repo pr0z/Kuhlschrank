@@ -12,3 +12,10 @@ C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Common\bin\Debug\DataCont
 C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.dll
 C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\bin\Debug\Common.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\bin\Debug\Common.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\bin\Debug\DataContracts.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\bin\Debug\DataContracts.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.pdb

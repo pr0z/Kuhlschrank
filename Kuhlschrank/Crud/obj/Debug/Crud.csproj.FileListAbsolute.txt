@@ -16,3 +16,12 @@ C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Crud\bin\Debug\DataContra
 C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Crud\obj\Debug\Crud.csprojResolveAssemblyReference.cache
 C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Crud\obj\Debug\Crud.dll
 C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Crud\obj\Debug\Crud.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Crud\bin\Debug\Crud.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Crud\bin\Debug\Crud.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Crud\bin\Debug\Common.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Crud\bin\Debug\DataContracts.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Crud\bin\Debug\Common.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Crud\bin\Debug\DataContracts.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Crud\obj\Debug\Crud.csprojResolveAssemblyReference.cache
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Crud\obj\Debug\Crud.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Crud\obj\Debug\Crud.pdb

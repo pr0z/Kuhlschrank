@@ -11,7 +11,7 @@ namespace DataCommunication.UserService
     {
         public User GetUser(int id, string nom)
         {
-            return new User { Id = id, Nom = nom };
+            return new User { ID = id, Nom = nom };
         }
     }
 }

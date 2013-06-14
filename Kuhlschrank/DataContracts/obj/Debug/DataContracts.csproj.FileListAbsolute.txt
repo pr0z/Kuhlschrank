@@ -12,3 +12,8 @@ C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Da
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataContracts\bin\Debug\DataContracts.pdb
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataContracts\obj\Debug\DataContracts.dll
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataContracts\obj\Debug\DataContracts.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataContracts\obj\Debug\DataContracts.csprojResolveAssemblyReference.cache
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataContracts\bin\Debug\SqlFactory.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataContracts\bin\Debug\Fasterflect.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataContracts\bin\Debug\SqlFactory.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataContracts\bin\Debug\Fasterflect.xml

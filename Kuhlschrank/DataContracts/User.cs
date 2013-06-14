@@ -4,21 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
+using DataContracts;
+using SqlFactory.Reflection;
 
 namespace DataContracts
 {
     [DataContract]
-    public class User
+    [SqlTable("USER")]
+    public class User : Entity
     {
         [DataMember]
-        public int Id { get; set; }
-        [DataMember]
+        [SqlField("nom")]
         public string Nom { get; set; }
         [DataMember]
+        [SqlField("prenom")]
         public string Prenom { get; set; }
         [DataMember]
+        [SqlField("mail")]
         public string Mail { get; set; }
         [DataMember]
+        [SqlField("pass")]
         public string Password { get; set; }
     }
 }

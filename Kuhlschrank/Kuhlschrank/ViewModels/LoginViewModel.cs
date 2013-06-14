@@ -1,5 +1,4 @@
 ﻿using Common;
-using Crud;
 using Kuhlschrank.Views;
 using Microsoft.Practices.Prism.Commands;
 using System;
@@ -8,6 +7,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Business;
+using DataContracts;
 
 namespace Kuhlschrank.ViewModels
 {
@@ -55,6 +56,16 @@ namespace Kuhlschrank.ViewModels
                 }
             }
         }
+
+        private UserManager _userManager;
+        public UserManager UserManager
+        {
+            get
+            {
+                return _userManager ?? (_userManager = new UserManager());
+            }
+        }
+
         #endregion
 
         #region CONSTRUCTOR
@@ -88,22 +99,37 @@ namespace Kuhlschrank.ViewModels
         private void CheckUserPassword()
         {
             string message;
-            using (USERScrud db = new USERScrud())
+            User user = new UserManager().GetUserFromIdAndPassword(Identifiant, Password);
+            if (user == null)
+                message = "L'utilisateur n'existe pas !";
+            else if (user.Password != Password)
+                message = "Le couple utilisateur / mot de passe est incorrect";
+            else
             {
-                var user = db.GetUserFromIdAndPassword(Identifiant, Password);
-                if (user == null)
-                    message = "L'utilisateur n'existe pas !";
-                else if (user.Password != Password)
-                    message = "Le couple utilisateur / mot de passe est incorrect";
-                else
-                {
-                    message = "Vous êtes connecté !";
-                    Context.ApplicationUser = user;
-                    MenuView menu = new MenuView();
-                    this.Context.HostWindow.Content = menu;
-                }
+                message = "Vous êtes connecté !";
+                Context.ApplicationUser = user;
+                MenuView menu = new MenuView();
+                this.Context.HostWindow.Content = menu;
             }
             System.Windows.MessageBox.Show(message);
+
+            //string message;
+            //using (USERScrud db = new USERScrud())
+            //{
+            //    var user = db.GetUserFromIdAndPassword(Identifiant, Password);
+            //    if (user == null)
+            //        message = "L'utilisateur n'existe pas !";
+            //    else if (user.Password != Password)
+            //        message = "Le couple utilisateur / mot de passe est incorrect";
+            //    else
+            //    {
+            //        message = "Vous êtes connecté !";
+            //        Context.ApplicationUser = user;
+            //        MenuView menu = new MenuView();
+            //        this.Context.HostWindow.Content = menu;
+            //    }
+            //}
+            //System.Windows.MessageBox.Show(message);
         }
 
         #endregion

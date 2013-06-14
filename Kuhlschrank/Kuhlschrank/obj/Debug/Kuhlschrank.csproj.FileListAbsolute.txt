@@ -57,10 +57,8 @@ C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Ku
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Kuhlschrank.exe
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Kuhlschrank.pdb
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Common.dll
-C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Crud.dll
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\DataContracts.dll
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Common.pdb
-C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Crud.pdb
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\DataContracts.pdb
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\Kuhlschrank.csprojResolveAssemblyReference.cache
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\MainWindow.baml
@@ -75,3 +73,11 @@ C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Ku
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\Kuhlschrank.g.resources
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\Kuhlschrank.Properties.Resources.resources
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\Kuhlschrank.csproj.GenerateResource.Cache
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\SqlFactory.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Fasterflect.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\SqlFactory.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Fasterflect.xml
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Business.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\DataAccess.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Business.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\DataAccess.pdb

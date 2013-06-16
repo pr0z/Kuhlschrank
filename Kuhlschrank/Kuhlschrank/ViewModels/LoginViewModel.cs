@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataContracts;
 using DataAccess;
+using DataAccess.Repository;
 
 namespace Kuhlschrank.ViewModels
 {
@@ -57,6 +58,16 @@ namespace Kuhlschrank.ViewModels
             }
         }
 
+        private IUserRepository _userRepo;
+        public IUserRepository UserRepository
+        {
+            get
+            {
+                return _userRepo ?? (_userRepo = new UserServiceRepository());
+            }
+        }
+
+
         #endregion
 
         #region CONSTRUCTOR
@@ -90,20 +101,17 @@ namespace Kuhlschrank.ViewModels
         private void CheckUserPassword()
         {
             string message;
-            using (USERScrud db = new USERScrud())
+            User user = UserRepository.GetUserFromIdAndPassword(Identifiant, Password);
+            if (user == null)
+                message = "L'utilisateur n'existe pas !";
+            else if (user.Password != Password)
+                message = "Le couple utilisateur / mot de passe est incorrect";
+            else
             {
-                var user = db.GetUserFromIdAndPassword(Identifiant, Password);
-                if (user == null)
-                    message = "L'utilisateur n'existe pas !";
-                else if (user.Password != Password)
-                    message = "Le couple utilisateur / mot de passe est incorrect";
-                else
-                {
-                    message = "Vous êtes connecté !";
-                    Context.ApplicationUser = user;
-                    MenuView menu = new MenuView();
-                    this.Context.HostWindow.Content = menu;
-                }
+                message = "Vous êtes connecté !";
+                Context.ApplicationUser = user;
+                MenuView menu = new MenuView();
+                this.Context.HostWindow.Content = menu;
             }
             System.Windows.MessageBox.Show(message);
         }

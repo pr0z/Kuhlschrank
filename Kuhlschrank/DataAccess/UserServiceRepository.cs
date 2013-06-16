@@ -9,7 +9,7 @@ using DataContracts;
 
 namespace DataAccess
 {
-    class UserServiceRepository : IUserRepository
+    public class UserServiceRepository : IUserRepository
     {
         #region IUserRepository Membres
 

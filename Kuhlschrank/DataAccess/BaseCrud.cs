@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Crud
+namespace DataAccess
 {
     public abstract class BaseCrud : IDisposable
     {

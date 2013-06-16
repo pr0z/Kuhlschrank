@@ -19,7 +19,3 @@ C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Co
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.dll
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.pdb
-C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\bin\Debug\SqlFactory.dll
-C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\bin\Debug\Fasterflect.dll
-C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\bin\Debug\SqlFactory.pdb
-C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\bin\Debug\Fasterflect.xml

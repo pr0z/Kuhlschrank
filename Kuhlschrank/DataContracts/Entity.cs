@@ -12,11 +12,6 @@ namespace DataContracts
     {
         public Entity() { }
 
-        public Entity(Entity entity)
-        {
-            this.ID = entity.ID;
-        }
-
         [DataMember]
         public int ID { get; set; }
     }

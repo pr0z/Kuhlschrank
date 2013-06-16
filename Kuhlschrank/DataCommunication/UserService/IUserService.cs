@@ -13,6 +13,21 @@ namespace DataCommunication.UserService
     public interface IUserService
     {
         [OperationContract]
-        User GetUser(int id, string nom);
+        User GetUserFromIdAndPassword(string identifier, string password);
+
+        [OperationContract]
+        User GetUserById(int id);
+
+        [OperationContract]
+        List<User> GetAll();
+
+        [OperationContract]
+        void Insert(User user);
+
+        [OperationContract]
+        void Update(User user);
+
+        [OperationContract]
+        void Delete(User user);
     }
 }

@@ -2,6 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuhlschrank", "Kuhlschrank\Kuhlschrank.csproj", "{0E7EE283-0DD2-4CAF-889D-5B766062B7EB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{27AE2D2D-2707-480F-BF53-8F82F0233BA6} = {27AE2D2D-2707-480F-BF53-8F82F0233BA6}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{365EE04A-7955-463B-82DD-30249383C609}"
 EndProject
@@ -14,6 +17,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{27B71EF8-A053-44A8-A149-8353E31D6E51}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{68BB57BA-950D-4D2E-AB77-2B75AB50BE3C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{27AE2D2D-2707-480F-BF53-8F82F0233BA6} = {27AE2D2D-2707-480F-BF53-8F82F0233BA6}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

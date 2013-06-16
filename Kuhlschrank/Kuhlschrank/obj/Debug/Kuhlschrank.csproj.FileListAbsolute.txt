@@ -81,3 +81,6 @@ C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Ku
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\DataAccess.dll
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Business.pdb
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\DataAccess.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\EntityFramework.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\EntityFramework.xml
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\fr\EntityFramework.resources.dll

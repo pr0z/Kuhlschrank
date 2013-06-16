@@ -62,7 +62,12 @@ namespace Kuhlschrank.ViewModels
         {
             get
             {
-                return _userManager ?? (_userManager = new UserManager());
+                if (_userManager == null)
+                {
+                    _userManager = new UserManager();
+                    _userManager.Insert(new User { Mail = "lala", Password = "lala" });
+                }
+                return _userManager;
             }
         }
 
@@ -99,7 +104,7 @@ namespace Kuhlschrank.ViewModels
         private void CheckUserPassword()
         {
             string message;
-            User user = new UserManager().GetUserFromIdAndPassword(Identifiant, Password);
+            User user = UserManager.GetUserFromIdAndPassword(Identifiant, Password);
             if (user == null)
                 message = "L'utilisateur n'existe pas !";
             else if (user.Password != Password)

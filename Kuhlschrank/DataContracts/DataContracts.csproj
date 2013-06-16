@@ -44,12 +44,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SqlFactory\SqlFactory.csproj">
-      <Project>{065f0e12-790f-4630-8e4a-954b6481f348}</Project>
-      <Name>SqlFactory</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -31,12 +31,13 @@ namespace SqlFactory
             {
                 SqlTableAttribute attr = t.Attribute<SqlTableAttribute>();
 
-                Table table = new Table();
+                _typeInfos[t] = new Table();
+                _typeInfos[t].Name = attr.TableName;
 
                 foreach (PropertyInfo prop in t.PropertiesWith(Flags.AllMembers | Flags.AnyVisibility, typeof(SqlFieldAttribute)))
                 {
                     SqlFieldAttribute field = prop.GetCustomAttribute<SqlFieldAttribute>();
-                    table.Fields.Add(new Field { IsPrimary = field.IsPrimary, SqlFieldName = field.FieldName, PropertyName = prop.Name });
+                    _typeInfos[t].Fields.Add(new Field { IsPrimary = field.IsPrimary, SqlFieldName = field.FieldName, PropertyName = prop.Name });
                 }
             }
         }
@@ -56,16 +57,16 @@ namespace SqlFactory
             switch (build)
             {
                 case CommandType.Insert:
-                    values = string.Join(", ", typeInfo.Fields.Select(o => entity.GetPropertyValue(o.SqlFieldName).ToString()).ToArray());
+                    values = string.Join(", ", typeInfo.Fields.Select(o => entity.GetPropertyValue(o.PropertyName) != null ? entity.GetPropertyValue(o.PropertyName).ToString() : "").ToArray());
                     fields = string.Join(", ", typeInfo.Fields.Select(o => o.SqlFieldName).ToArray());
                     return string.Format("INSERT INTO {0} ({1}) VALUES ({2});", typeInfo.Name, fields, values);
                     break;
                 case CommandType.Update:
-                    values = string.Join(", ", typeInfo.Fields.Select(o => string.Format("{0} = {1}, ", o.SqlFieldName, entity.GetPropertyValue(o.SqlFieldName))).ToArray());
+                    values = string.Join(", ", typeInfo.Fields.Select(o => string.Format("{0} = {1}, ", o.SqlFieldName, entity.GetPropertyValue(o.PropertyName))).ToArray());
                     return string.Format("UPDATE {0} SET {1};", typeInfo.Name, values);
                     break;
                 case CommandType.Delete:
-                    return string.Format("DELETE FROM {0} WHERE id = {1}", typeInfo.Name, entity.GetPropertyValue(typeInfo.Fields.Find(o => o.IsPrimary).SqlFieldName));
+                    return string.Format("DELETE FROM {0} WHERE id = {1}", typeInfo.Name, entity.GetPropertyValue(typeInfo.Fields.Find(o => o.IsPrimary).PropertyName));
                     break;
                 case CommandType.Select:
                     return string.Format("SELECT * FROM {0};", typeInfo.Name);

@@ -41,13 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseCrud.cs" />
-    <Compile Include="Implementation\IDataAccess.cs" />
-    <Compile Include="Implementation\ListDataAccess.cs" />
-    <Compile Include="Implementation\SqlServerAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\IRepository.cs" />
-    <Compile Include="Repository\Repository.cs" />
-    <Compile Include="Implementation\SqlManager.cs" />
     <Compile Include="USERScrud.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -58,10 +52,6 @@
     <ProjectReference Include="..\DataContracts\DataContracts.csproj">
       <Project>{5d40519e-fa43-491d-a8dd-75c92339b814}</Project>
       <Name>DataContracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SqlFactory\SqlFactory.csproj">
-      <Project>{065f0e12-790f-4630-8e4a-954b6481f348}</Project>
-      <Name>SqlFactory</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

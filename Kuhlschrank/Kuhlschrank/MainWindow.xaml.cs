@@ -47,7 +47,7 @@ namespace Kuhlschrank
             Context = new ApplicationContext();
             Context.HostWindow = this;
             LoginView lv = new LoginView(Context);
-            this.SetContent((UserControl)lv);
+            this.SetContent(lv);
         }
 
         public void SetContent(UserControl uc)

@@ -1,0 +1,11 @@
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Services\bin\Services.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Services\bin\Services.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Services\bin\DataCommunication.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Services\bin\DataContracts.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Services\bin\DataCommunication.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Services\bin\DataContracts.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Services\obj\Debug\Services.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Services\obj\Debug\Services.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Services\bin\Common.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Services\bin\Common.pdb

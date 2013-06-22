@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KUHLSCHRANKModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="KUHLSCHRANKModelStoreContainer">
+    <EntitySet Name="USER" EntityType="KUHLSCHRANKModel.Store.USER" store:Type="Tables" store:Schema="dbo" store:Name="USER">
+      <DefiningQuery>SELECT 
+      [USER].[id] AS [id], 
+      [USER].[nom] AS [nom], 
+      [USER].[prenom] AS [prenom], 
+      [USER].[mail] AS [mail], 
+      [USER].[pass] AS [pass]
+      FROM [dbo].[USER] AS [USER]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <!--Erreurs détectées durant la génération :
+      Avertissement 6002: La table/vue « KUHLSCHRANK.dbo.USER » n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.
+      -->
+  <EntityType Name="USER">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nom" Type="nvarchar" MaxLength="50" />
+    <Property Name="prenom" Type="nvarchar" MaxLength="50" />
+    <Property Name="mail" Type="nvarchar" MaxLength="50" />
+    <Property Name="pass" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,9 @@
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Release\DataCommunication.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Release\DataCommunication.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Release\Common.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Release\DataContracts.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Release\Common.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Release\DataContracts.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataCommunication\obj\Release\DataCommunication.csprojResolveAssemblyReference.cache
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataCommunication\obj\Release\DataCommunication.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataCommunication\obj\Release\DataCommunication.pdb

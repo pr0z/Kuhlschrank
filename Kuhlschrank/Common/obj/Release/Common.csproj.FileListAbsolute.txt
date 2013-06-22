@@ -1,0 +1,7 @@
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\bin\Release\Common.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\bin\Release\Common.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\bin\Release\DataContracts.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\bin\Release\DataContracts.pdb
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\obj\Release\Common.dll
+C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\obj\Release\Common.pdb

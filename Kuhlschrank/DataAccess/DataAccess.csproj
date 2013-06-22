@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserListRepository.cs" />
     <Compile Include="UserServiceRepository.cs" />
     <Compile Include="Service References\UserService\Reference.cs">
       <AutoGen>True</AutoGen>

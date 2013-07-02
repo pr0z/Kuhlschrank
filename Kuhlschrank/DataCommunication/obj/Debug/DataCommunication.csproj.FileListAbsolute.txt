@@ -7,3 +7,12 @@ C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Da
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataCommunication\obj\Debug\DataCommunication.pdb
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\Common.dll
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\Common.pdb
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\DataCommunication.dll
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\DataCommunication.pdb
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\Common.dll
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\DataContracts.dll
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\Common.pdb
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\DataContracts.pdb
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\obj\Debug\DataCommunication.csprojResolveAssemblyReference.cache
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\obj\Debug\DataCommunication.dll
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\obj\Debug\DataCommunication.pdb

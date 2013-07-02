@@ -9,7 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using DataContracts;
 using DataAccess;
-using DataAccess.Repository;
+using Business.Repositories;
+using Business.Repositories.UserRepository;
 
 namespace Kuhlschrank.ViewModels
 {

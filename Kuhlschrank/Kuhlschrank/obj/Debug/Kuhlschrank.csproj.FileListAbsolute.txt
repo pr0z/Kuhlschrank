@@ -77,3 +77,29 @@ C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Ku
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\DataAccess.dll
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Business.pdb
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\DataAccess.pdb
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Kuhlschrank.exe.config
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\Kuhlschrank.exe
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\Kuhlschrank.pdb
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\Kuhlschrank.csprojResolveAssemblyReference.cache
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\MainWindow.baml
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\Views\LoginView.baml
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\Views\MenuView.baml
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\App.baml
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\MainWindow.g.cs
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\Views\LoginView.g.cs
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\Views\MenuView.g.cs
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\App.g.cs
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\Kuhlschrank_MarkupCompile.cache
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\Kuhlschrank.g.resources
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\Kuhlschrank.Properties.Resources.resources
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\obj\Debug\Kuhlschrank.csproj.GenerateResource.Cache
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Kuhlschrank.exe
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Kuhlschrank.pdb
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Business.dll
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Common.dll
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\DataAccess.dll
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\DataContracts.dll
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Business.pdb
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\Common.pdb
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\DataAccess.pdb
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Kuhlschrank\bin\Debug\DataContracts.pdb

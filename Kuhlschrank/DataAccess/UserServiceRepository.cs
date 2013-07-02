@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataAccess.Repository;
+using Business.Repositories.UserRepository;
+using Business.Repositories;
 using DataAccess.WebServices;
 using DataContracts;
 

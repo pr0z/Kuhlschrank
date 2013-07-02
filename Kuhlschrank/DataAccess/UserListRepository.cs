@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using DataAccess.Repository;
+using Business.Repositories;
+using Business.Repositories.UserRepository;
 using DataContracts;
 
 namespace DataAccess

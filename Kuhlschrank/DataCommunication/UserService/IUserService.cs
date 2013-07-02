@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.ServiceModel;
 using System.Text;
+using System.ServiceModel;
 using System.Threading.Tasks;
-using DataContracts;
+using System.Collections.Generic;
 
+using DataContracts;
 
 namespace DataCommunication.UserService
 {

@@ -42,29 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UserListRepository.cs" />
-    <Compile Include="UserServiceRepository.cs" />
+    <Compile Include="AccessBD\AccessBD.cs" />
     <Compile Include="Service References\UserService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="UserRepositoriesImplementation\UserListRepository.cs" />
+    <Compile Include="UserRepositoriesImplementation\UserServiceRepository.cs" />
+    <Compile Include="UserRepositoriesImplementation\UserSqlServerRepository.cs" />
     <Compile Include="WebServices\MyWebServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Business\Business.csproj">
-      <Project>{27b71ef8-a053-44a8-a149-8353e31d6e51}</Project>
-      <Name>Business</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{365ee04a-7955-463b-82dd-30249383c609}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataContracts\DataContracts.csproj">
-      <Project>{5d40519e-fa43-491d-a8dd-75c92339b814}</Project>
-      <Name>DataContracts</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -84,6 +72,16 @@
     <None Include="Service References\UserService\UserService.wsdl" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{365ee04a-7955-463b-82dd-30249383c609}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataContracts\DataContracts.csproj">
+      <Project>{5d40519e-fa43-491d-a8dd-75c92339b814}</Project>
+      <Name>DataContracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <WCFMetadataStorage Include="Service References\UserService\" />
   </ItemGroup>
   <ItemGroup>
@@ -101,7 +99,6 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

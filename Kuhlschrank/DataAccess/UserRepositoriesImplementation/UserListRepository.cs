@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Business.Repositories;
-using Business.Repositories.UserRepository;
+using Common.Repositories;
+using Common.Repositories.UserRepository;
 using DataContracts;
 
-namespace DataAccess
+namespace DataAccess.UserRepositoriesImplementation
 {
     public class UserListRepository : IUserRepository
     {

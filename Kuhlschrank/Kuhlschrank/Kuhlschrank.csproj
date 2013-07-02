@@ -122,10 +122,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Business\Business.csproj">
-      <Project>{27b71ef8-a053-44a8-a149-8353e31d6e51}</Project>
-      <Name>Business</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{365ee04a-7955-463b-82dd-30249383c609}</Project>
       <Name>Common</Name>

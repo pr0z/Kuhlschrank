@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Business.Repositories.UserRepository;
-using Business.Repositories;
-using DataAccess.WebServices;
-using DataContracts;
 
-namespace DataAccess
+using DataContracts;
+using DataAccess.WebServices;
+using Common.Repositories;
+using Common.Repositories.UserRepository;
+
+namespace DataAccess.UserRepositoriesImplementation
 {
     public class UserServiceRepository : IUserRepository
     {
@@ -16,7 +17,8 @@ namespace DataAccess
 
         User IUserRepository.GetUserFromIdAndPassword(string identifier, string password)
         {
-            return MyWebServices.UserService.GetUserFromIdAndPassword(identifier, password);
+            //return MyWebServices.UserService.GetUserFromIdAndPassword(identifier, password);
+            return null;
         }
 
         #endregion
@@ -25,27 +27,29 @@ namespace DataAccess
 
         User IRepository<User>.GetById(int id)
         {
-            return MyWebServices.UserService.GetUserById(id);
+            //return MyWebServices.UserService.GetUserById(id);
+            return null;
         }
 
         List<User> IRepository<User>.GetAll()
         {
-            return MyWebServices.UserService.GetAll();
+            //return MyWebServices.UserService.GetAll();
+            return null;
         }
 
         void IRepository<User>.Insert(User entity)
         {
-            MyWebServices.UserService.Insert(entity);
+            //MyWebServices.UserService.Insert(entity);
         }
 
         void IRepository<User>.Update(User entity)
         {
-            MyWebServices.UserService.Update(entity);
+            //MyWebServices.UserService.Update(entity);
         }
 
         void IRepository<User>.Delete(User entity)
         {
-            MyWebServices.UserService.Delete(entity);
+            //MyWebServices.UserService.Delete(entity);
         }
 
         #endregion

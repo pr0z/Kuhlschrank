@@ -15,7 +15,7 @@ namespace DataCommunication.UserService
 {
     public class UserService : IUserService
     {
-        IUserRepository _userRepo = new UserSqlServerRepository();
+        IUserRepository _userRepo = new UserListRepository();
 
         public User GetUserFromIdAndPassword(string identifier, string password)
         {

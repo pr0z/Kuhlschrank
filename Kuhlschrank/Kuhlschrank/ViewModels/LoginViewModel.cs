@@ -1,14 +1,15 @@
-﻿using Common;
-using Kuhlschrank.Views;
-using Microsoft.Practices.Prism.Commands;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataContracts;
+using Microsoft.Practices.Prism.Commands;
+
+using Common;
 using DataAccess;
+using DataContracts;
+using Kuhlschrank.Views;
 using Common.Repositories;
 using Common.Repositories.UserRepository;
 using DataAccess.UserRepositoriesImplementation;
@@ -68,8 +69,6 @@ namespace Kuhlschrank.ViewModels
                 return _userRepo ?? (_userRepo = new UserServiceRepository());
             }
         }
-
-
         #endregion
 
         #region CONSTRUCTOR

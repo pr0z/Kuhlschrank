@@ -14,11 +14,11 @@ namespace DataCommunication.UserService
     public interface IUserService
     {
         [OperationContract]
-        [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "GetUserFromIdAndPassword?i={identifier}&p={password}")]
+        [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "fromIAndP?i={identifier}&p={password}")]
         User GetUserFromIdAndPassword(string identifier, string password);
 
         [OperationContract]
-        [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "getbyid?id={id}")]
+        [WebGet(ResponseFormat = WebMessageFormat.Json)]
         User GetUserById(int id);
 
         [OperationContract]

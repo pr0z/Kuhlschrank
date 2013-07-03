@@ -19,10 +19,17 @@ C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Co
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.dll
 C:\Users\Xavier\Documents\Visual Studio 2012\Projects\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.pdb
+C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Common\bin\Debug\Common.dll
 C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Common\bin\Debug\Common.pdb
 C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Common\bin\Debug\DataContracts.dll
 C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Common\bin\Debug\DataContracts.pdb
-C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.dll
 C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.pdb
+C:\XD\Kuhlschrank\Kuhlschrank\Common\bin\Debug\Common.dll
+C:\XD\Kuhlschrank\Kuhlschrank\Common\bin\Debug\Common.pdb
+C:\XD\Kuhlschrank\Kuhlschrank\Common\bin\Debug\DataContracts.dll
+C:\XD\Kuhlschrank\Kuhlschrank\Common\bin\Debug\DataContracts.pdb
+C:\XD\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\XD\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.dll
+C:\XD\Kuhlschrank\Kuhlschrank\Common\obj\Debug\Common.pdb

@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Text;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
@@ -13,12 +14,15 @@ namespace DataCommunication.UserService
     public interface IUserService
     {
         [OperationContract]
+        [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "GetUserFromIdAndPassword?i={identifier}&p={password}")]
         User GetUserFromIdAndPassword(string identifier, string password);
 
         [OperationContract]
+        [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "getbyid?id={id}")]
         User GetUserById(int id);
 
         [OperationContract]
+        [WebGet(ResponseFormat = WebMessageFormat.Json)]
         List<User> GetAll();
 
         [OperationContract]

@@ -16,3 +16,7 @@ C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataContracts\bin\Debug
 C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataContracts\bin\Debug\DataContracts.pdb
 C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataContracts\obj\Debug\DataContracts.dll
 C:\Users\info02\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataContracts\obj\Debug\DataContracts.pdb
+C:\XD\Kuhlschrank\Kuhlschrank\DataContracts\bin\Debug\DataContracts.dll
+C:\XD\Kuhlschrank\Kuhlschrank\DataContracts\bin\Debug\DataContracts.pdb
+C:\XD\Kuhlschrank\Kuhlschrank\DataContracts\obj\Debug\DataContracts.dll
+C:\XD\Kuhlschrank\Kuhlschrank\DataContracts\obj\Debug\DataContracts.pdb

@@ -19,3 +19,4 @@ C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataContracts\bin\Debug\D
 C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataContracts\bin\Debug\DataContracts.pdb
 C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataContracts\obj\Debug\DataContracts.dll
 C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataContracts\obj\Debug\DataContracts.pdb
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataContracts\obj\Debug\DataContracts.csprojResolveAssemblyReference.cache

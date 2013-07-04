@@ -22,7 +22,7 @@ namespace DataAccess.UserRepositoriesImplementation
                 Insert(new User
                 {
                     ID = 0,
-                    Mail = "test@test.fr",
+                    Mail = "test",
                     Nom = "test",
                     Prenom = "test",
                     Password = "test"

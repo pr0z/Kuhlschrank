@@ -17,8 +17,7 @@ namespace DataAccess.UserRepositoriesImplementation
 
         User IUserRepository.GetUserFromIdAndPassword(string identifier, string password)
         {
-            //return MyWebServices.UserService.GetUserFromIdAndPassword(identifier, password);
-            return null;
+            return MyWebServices.UserService.GetUserFromIdAndPassword(identifier, password);
         }
 
         #endregion
@@ -27,29 +26,27 @@ namespace DataAccess.UserRepositoriesImplementation
 
         User IRepository<User>.GetById(int id)
         {
-            //return MyWebServices.UserService.GetUserById(id);
-            return null;
+            return MyWebServices.UserService.GetUserById(id);
         }
 
         List<User> IRepository<User>.GetAll()
         {
-            //return MyWebServices.UserService.GetAll();
-            return null;
+            return MyWebServices.UserService.GetAll();
         }
 
         void IRepository<User>.Insert(User entity)
         {
-            //MyWebServices.UserService.Insert(entity);
+            MyWebServices.UserService.Insert(entity);
         }
 
         void IRepository<User>.Update(User entity)
         {
-            //MyWebServices.UserService.Update(entity);
+            MyWebServices.UserService.Update(entity);
         }
 
         void IRepository<User>.Delete(User entity)
         {
-            //MyWebServices.UserService.Delete(entity);
+            MyWebServices.UserService.Delete(entity);
         }
 
         #endregion

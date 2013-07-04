@@ -28,10 +28,10 @@ namespace DataAccess.UserService {
         System.Threading.Tasks.Task<DataContracts.User> GetUserByIdAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAll", ReplyAction="http://tempuri.org/IUserService/GetAllResponse")]
-        DataContracts.User[] GetAll();
+        System.Collections.Generic.List<DataContracts.User> GetAll();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAll", ReplyAction="http://tempuri.org/IUserService/GetAllResponse")]
-        System.Threading.Tasks.Task<DataContracts.User[]> GetAllAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<DataContracts.User>> GetAllAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/Insert", ReplyAction="http://tempuri.org/IUserService/InsertResponse")]
         void Insert(DataContracts.User user);
@@ -95,11 +95,11 @@ namespace DataAccess.UserService {
             return base.Channel.GetUserByIdAsync(id);
         }
         
-        public DataContracts.User[] GetAll() {
+        public System.Collections.Generic.List<DataContracts.User> GetAll() {
             return base.Channel.GetAll();
         }
         
-        public System.Threading.Tasks.Task<DataContracts.User[]> GetAllAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<DataContracts.User>> GetAllAsync() {
             return base.Channel.GetAllAsync();
         }
         

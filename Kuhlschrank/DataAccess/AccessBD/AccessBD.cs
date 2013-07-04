@@ -18,7 +18,7 @@ namespace DataAccess
             {
                 if (_connection == null || _connection.State == System.Data.ConnectionState.Closed || _connection.State == System.Data.ConnectionState.Broken)
                 {
-                    _connection = new SqlConnection(ConfigurationManager.ConnectionStrings["KUHLSCHRANK"].ConnectionString);
+                    _connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ROMAN"].ConnectionString);
                     _connection.Open();
                 }
                 return _connection;

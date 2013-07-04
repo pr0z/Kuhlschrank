@@ -21,7 +21,7 @@ namespace DataAccess.ProductRepositoriesImplementation
                 {
                     Insert(new Product()
                     {
-                        Id = i,
+                        ID = i,
                         Libelle = "Produit " + i
                     });
                 }

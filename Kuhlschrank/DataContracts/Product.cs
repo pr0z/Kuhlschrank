@@ -11,9 +11,6 @@ namespace DataContracts
     public class Product : Entity
     {
         [DataMember]
-        public int Id { get; set; }
-
-        [DataMember]
         public string Libelle { get; set; }
     }
 }

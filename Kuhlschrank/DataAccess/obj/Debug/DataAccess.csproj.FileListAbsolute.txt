@@ -37,3 +37,13 @@ C:\XD\Kuhlschrank\Kuhlschrank\DataAccess\bin\Debug\DataContracts.pdb
 C:\XD\Kuhlschrank\Kuhlschrank\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 C:\XD\Kuhlschrank\Kuhlschrank\DataAccess\obj\Debug\DataAccess.dll
 C:\XD\Kuhlschrank\Kuhlschrank\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataAccess\bin\Debug\Common.dll
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataAccess\bin\Debug\DataContracts.dll
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataAccess\bin\Debug\Common.pdb
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataAccess\bin\Debug\DataContracts.pdb
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataAccess\obj\Debug\DataAccess.pdb

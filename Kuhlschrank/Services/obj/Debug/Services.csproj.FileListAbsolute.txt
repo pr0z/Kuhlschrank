@@ -35,3 +35,16 @@ C:\XD\Kuhlschrank\Kuhlschrank\Services\bin\DataAccess.pdb
 C:\XD\Kuhlschrank\Kuhlschrank\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
 C:\XD\Kuhlschrank\Kuhlschrank\Services\obj\Debug\Services.dll
 C:\XD\Kuhlschrank\Kuhlschrank\Services\obj\Debug\Services.pdb
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Services\bin\Services.dll
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Services\bin\Services.pdb
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Services\bin\DataCommunication.dll
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Services\bin\DataContracts.dll
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Services\bin\Common.dll
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Services\bin\DataAccess.dll
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Services\bin\DataCommunication.pdb
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Services\bin\DataContracts.pdb
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Services\bin\Common.pdb
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Services\bin\DataAccess.pdb
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Services\obj\Debug\Services.dll
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Services\obj\Debug\Services.pdb

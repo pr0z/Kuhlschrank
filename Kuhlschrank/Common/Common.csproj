@@ -50,6 +50,7 @@
     <Compile Include="Helpers\Tools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\ProductRepository\IProductRepository.cs" />
     <Compile Include="Repositories\UserRepository\IUserRepository.cs" />
   </ItemGroup>
   <ItemGroup>

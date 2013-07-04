@@ -43,7 +43,7 @@ namespace DataAccess.UserRepositoriesImplementation
 
         public List<User> GetAll()
         {
-            string query = string.Format("SELECT * FROM USER");
+            string query = string.Format("SELECT * FROM USERS");
             using (SqlCommand cmd = AccessBD.Connection.CreateCommand())
             {
                 cmd.CommandText = query;

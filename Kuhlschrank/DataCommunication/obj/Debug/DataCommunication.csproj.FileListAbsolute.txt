@@ -29,3 +29,14 @@ C:\XD\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\Common.pdb
 C:\XD\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\DataAccess.pdb
 C:\XD\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\DataContracts.pdb
 C:\XD\Kuhlschrank\Kuhlschrank\DataCommunication\obj\Debug\DataCommunication.pdb
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\DataCommunication.dll
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\DataCommunication.pdb
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\Common.dll
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\DataAccess.dll
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\DataContracts.dll
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\Common.pdb
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\DataAccess.pdb
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\bin\Debug\DataContracts.pdb
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\obj\Debug\DataCommunication.csprojResolveAssemblyReference.cache
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\obj\Debug\DataCommunication.dll
+C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\DataCommunication\obj\Debug\DataCommunication.pdb

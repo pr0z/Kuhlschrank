@@ -43,9 +43,9 @@ namespace DataCommunication.DeviceService
             throw new NotImplementedException();
         }
 
-        public void Delete(DataContracts.Device device)
+        public void Delete(string uniqueIdentifier)
         {
-            Device item = _repo.GetAll().Where(o => o.ID == device.ID).FirstOrDefault();
+            Device item = _repo.GetAll().Where(o => o.uniqueIdentifier == uniqueIdentifier).FirstOrDefault();
             if (item != null)
             {
                 _repo.Delete(item);

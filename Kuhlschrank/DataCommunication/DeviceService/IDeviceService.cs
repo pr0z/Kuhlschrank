@@ -32,6 +32,7 @@ namespace DataCommunication.DeviceService
         void Update(Device device);
 
         [OperationContract]
-        void Delete(Device device);
+        [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "deleteDevice?uid={uniqueIdentifier}")]
+        void Delete(string uniqueIdentifier);
     }
 }

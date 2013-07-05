@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessBD\AccessBD.cs" />
+    <Compile Include="DeviceRepositoryImplementation\DeviceSqlServerRepository.cs" />
     <Compile Include="ProductRepositoriesImplementation\ProductListRepository.cs" />
     <Compile Include="Service References\UserService\Reference.cs">
       <AutoGen>True</AutoGen>

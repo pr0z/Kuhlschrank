@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeviceService\DeviceService.cs" />
+    <Compile Include="DeviceService\IDeviceService.cs" />
     <Compile Include="ProductService\IProductService.cs" />
     <Compile Include="ProductService\ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

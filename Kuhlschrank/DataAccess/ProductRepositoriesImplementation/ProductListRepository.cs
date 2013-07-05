@@ -16,13 +16,15 @@ namespace DataAccess.ProductRepositoriesImplementation
         {
             if (_source == null)
             {
+                Random rdm = new Random();
                 _source = new List<Product>();
                 for (int i = 0; i < 15; i++)
                 {
                     Insert(new Product()
                     {
                         ID = i,
-                        Libelle = "Produit " + i
+                        Libelle = "Produit " + i,
+                        IdCategory = rdm.Next(1, 4)
                     });
                 }
             }

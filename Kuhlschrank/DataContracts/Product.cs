@@ -12,5 +12,8 @@ namespace DataContracts
     {
         [DataMember]
         public string Libelle { get; set; }
+
+        [DataMember]
+        public int IdCategory { get; set; }
     }
 }

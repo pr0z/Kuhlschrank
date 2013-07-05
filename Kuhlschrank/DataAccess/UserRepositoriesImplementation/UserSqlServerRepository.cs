@@ -16,7 +16,7 @@ namespace DataAccess.UserRepositoriesImplementation
     {
         public User GetUserFromIdAndPassword(string identifier, string password)
         {
-            string query = string.Format("SELECT * FROM USER WHERE mail={0};", identifier);
+            string query = string.Format("SELECT * FROM USERS WHERE mail='{0}' and pass='{1}';", identifier, password);
             using (SqlCommand cmd = AccessBD.Connection.CreateCommand())
             {
                 cmd.CommandText = query;
@@ -29,7 +29,7 @@ namespace DataAccess.UserRepositoriesImplementation
 
         public User GetById(int id)
         {
-            string query = string.Format("SELECT * FROM USER WHERE id={0};", id);
+            string query = string.Format("SELECT * FROM USERS WHERE id={0};", id);
             using (SqlCommand cmd = AccessBD.Connection.CreateCommand())
             {
                 cmd.CommandText = query;
@@ -56,7 +56,7 @@ namespace DataAccess.UserRepositoriesImplementation
 
         public void Insert(User entity)
         {
-            string query = string.Format("INSERT INTO USER(nom, prenom, mail, pass) VALUES('{0}', '{1}', '{2}', '{3}');", entity.Nom, entity.Prenom, entity.Mail, entity.Password);
+            string query = string.Format("INSERT INTO USERS(nom, prenom, mail, pass) VALUES('{0}', '{1}', '{2}', '{3}');", entity.Nom, entity.Prenom, entity.Mail, entity.Password);
             using (SqlCommand cmd = AccessBD.Connection.CreateCommand())
             {
                 cmd.CommandText = query;
@@ -66,7 +66,7 @@ namespace DataAccess.UserRepositoriesImplementation
 
         public void Update(User entity)
         {
-            string query = string.Format("UPDATE USER SET nom='{0}', prenom='{1}', mail='{2}', pass='{3}' WHERE id={4};", entity.Nom, entity.Prenom, entity.Mail, entity.Password, entity.ID);
+            string query = string.Format("UPDATE USERS SET nom='{0}', prenom='{1}', mail='{2}', pass='{3}' WHERE id={4};", entity.Nom, entity.Prenom, entity.Mail, entity.Password, entity.ID);
             using (SqlCommand cmd = AccessBD.Connection.CreateCommand())
             {
                 cmd.CommandText = query;
@@ -76,7 +76,7 @@ namespace DataAccess.UserRepositoriesImplementation
 
         public void Delete(User entity)
         {
-            string query = string.Format("DELETE FROM USER WHERE id={0};", entity.ID);
+            string query = string.Format("DELETE FROM USERS WHERE id={0};", entity.ID);
             using (SqlCommand cmd = AccessBD.Connection.CreateCommand())
             {
                 cmd.CommandText = query;

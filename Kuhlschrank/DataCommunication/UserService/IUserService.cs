@@ -18,7 +18,7 @@ namespace DataCommunication.UserService
         User GetUserFromIdAndPassword(string identifier, string password);
 
         [OperationContract]
-        [WebGet(ResponseFormat = WebMessageFormat.Json)]
+        [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "getbyid?id={id}")]
         User GetUserById(int id);
 
         [OperationContract]
@@ -29,7 +29,8 @@ namespace DataCommunication.UserService
         void Insert(User user);
 
         [OperationContract]
-        void Update(User user);
+        [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "updateUser?id={id}&n={nom}&f={prenom}&m={mail}")]
+        void Update(int id, string nom, string prenom, string mail);
 
         [OperationContract]
         void Delete(User user);

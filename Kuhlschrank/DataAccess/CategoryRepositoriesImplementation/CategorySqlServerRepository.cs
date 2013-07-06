@@ -1,7 +1,4 @@
-﻿using Common.Repositories;
-using DataContracts;
-using System;
-using System;
+﻿using System;
 using System.Linq;
 using System.Text;
 using System.Data;

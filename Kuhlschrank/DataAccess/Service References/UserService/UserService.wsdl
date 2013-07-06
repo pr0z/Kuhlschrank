@@ -13,11 +13,11 @@
   <wsdl:message name="IUserService_GetUserFromIdAndPassword_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetUserFromIdAndPasswordResponse" />
   </wsdl:message>
-  <wsdl:message name="IUserService_GetUserById_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetUserById" />
+  <wsdl:message name="IUserService_GetById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetById" />
   </wsdl:message>
-  <wsdl:message name="IUserService_GetUserById_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
+  <wsdl:message name="IUserService_GetById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIdResponse" />
   </wsdl:message>
   <wsdl:message name="IUserService_GetAll_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAll" />
@@ -30,6 +30,12 @@
   </wsdl:message>
   <wsdl:message name="IUserService_Insert_OutputMessage">
     <wsdl:part name="parameters" element="tns:InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_rest_update_InputMessage">
+    <wsdl:part name="parameters" element="tns:rest_update" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_rest_update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:rest_updateResponse" />
   </wsdl:message>
   <wsdl:message name="IUserService_Update_InputMessage">
     <wsdl:part name="parameters" element="tns:Update" />
@@ -48,9 +54,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetUserFromIdAndPassword" message="tns:IUserService_GetUserFromIdAndPassword_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetUserFromIdAndPasswordResponse" message="tns:IUserService_GetUserFromIdAndPassword_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetUserById">
-      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetUserById" message="tns:IUserService_GetUserById_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetUserByIdResponse" message="tns:IUserService_GetUserById_OutputMessage" />
+    <wsdl:operation name="GetById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetById" message="tns:IUserService_GetById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetByIdResponse" message="tns:IUserService_GetById_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAll">
       <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetAll" message="tns:IUserService_GetAll_InputMessage" />
@@ -59,6 +65,10 @@
     <wsdl:operation name="Insert">
       <wsdl:input wsaw:Action="http://tempuri.org/IUserService/Insert" message="tns:IUserService_Insert_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUserService/InsertResponse" message="tns:IUserService_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="rest_update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/rest_update" message="tns:IUserService_rest_update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/rest_updateResponse" message="tns:IUserService_rest_update_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Update">
       <wsdl:input wsaw:Action="http://tempuri.org/IUserService/Update" message="tns:IUserService_Update_InputMessage" />
@@ -69,5 +79,75 @@
       <wsdl:output wsaw:Action="http://tempuri.org/IUserService/DeleteResponse" message="tns:IUserService_Delete_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:service name="UserService" />
+  <wsdl:binding name="BasicHttpBinding_IUserService" type="tns:IUserService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserFromIdAndPassword">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetUserFromIdAndPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetById">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAll">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert">
+      <soap:operation soapAction="http://tempuri.org/IUserService/Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rest_update">
+      <soap:operation soapAction="http://tempuri.org/IUserService/rest_update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="http://tempuri.org/IUserService/Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/IUserService/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserService">
+    <wsdl:port name="BasicHttpBinding_IUserService" binding="tns:BasicHttpBinding_IUserService">
+      <soap:address location="http://localhost:1966/User.svc/win" />
+    </wsdl:port>
+  </wsdl:service>
 </wsdl:definitions>

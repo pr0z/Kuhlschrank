@@ -45,7 +45,7 @@ namespace DataAccess.WebServices
             }
         }
         #endregion
-        
+
         #region DeviceService
         private static DeviceService.DeviceServiceClient _udc;
         public static DeviceService.DeviceServiceClient DeviceService
@@ -58,6 +58,22 @@ namespace DataAccess.WebServices
                     _udc.Open();
                 }
                 return _udc;
+            }
+        }
+        #endregion
+
+        #region CategoryService
+        private static CategoryService.CategoryServiceClient _ucc;
+        public static CategoryService.CategoryServiceClient CategoryService
+        {
+            get
+            {
+                if (_ucc == null || !IsInGoodState(_ucc.State))
+                {
+                    _ucc = new CategoryService.CategoryServiceClient();
+                    _ucc.Open();
+                }
+                return _ucc;
             }
         }
         #endregion

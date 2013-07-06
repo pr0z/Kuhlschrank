@@ -12,7 +12,7 @@ namespace DataAccess.ProductRepositoriesImplementation
     {
         public DataContracts.Product GetById(int id)
         {
-            throw new NotImplementedException();
+            return MyWebServices.ProductService.GetById(id);
         }
 
         public List<DataContracts.Product> GetAll()
@@ -22,17 +22,17 @@ namespace DataAccess.ProductRepositoriesImplementation
 
         public void Insert(DataContracts.Product entity)
         {
-            throw new NotImplementedException();
+            MyWebServices.ProductService.Insert(entity);
         }
 
         public void Update(DataContracts.Product entity)
         {
-            throw new NotImplementedException();
+            MyWebServices.ProductService.Update(entity);
         }
 
         public void Delete(DataContracts.Product entity)
         {
-            throw new NotImplementedException();
+            MyWebServices.ProductService.Delete(entity);
         }
     }
 }

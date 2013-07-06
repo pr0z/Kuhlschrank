@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace Common.Repositories.ProductRepository
 {
-    [ServiceContract]
     public interface IProductRepository : IRepository<Product>
     {
     }

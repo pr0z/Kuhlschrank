@@ -9,10 +9,8 @@ using System.ServiceModel;
 
 namespace Common.Repositories.UserRepository
 {
-    [ServiceContract]
     public interface IUserRepository : IRepository<User>
     {
-        [OperationContract]
         User GetUserFromIdAndPassword(string identifier, string password);
     }
 }

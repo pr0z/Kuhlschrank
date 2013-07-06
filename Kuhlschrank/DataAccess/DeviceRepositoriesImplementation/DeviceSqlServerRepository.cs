@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.DeviceRepositoryImplementation
+namespace DataAccess.DeviceRepositoriesImplementation
 {
     public class DeviceSqlServerRepository : IDeviceRepository
     {
@@ -53,7 +53,17 @@ namespace DataAccess.DeviceRepositoryImplementation
 
         public void Update(DataContracts.Device entity)
         {
-            throw new NotImplementedException();
+            string query = string.Format("UPDATE DEVICE SET type='{1}', uniqueIdentifier='{2}', userId={3} WHERE id={0};",
+                entity.ID,
+                entity.type,
+                entity.uniqueIdentifier,
+                entity.userId);
+
+            using (SqlCommand cmd = AccessBD.Connection.CreateCommand())
+            {
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+            }
         }
 
         public void Delete(DataContracts.Device entity)

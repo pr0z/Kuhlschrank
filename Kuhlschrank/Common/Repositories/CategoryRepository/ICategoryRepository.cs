@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace Common.Repositories.CategoryRepository
 {
-    [ServiceContract]   
     public interface ICategoryRepository : IRepository<Category>
     {
     }

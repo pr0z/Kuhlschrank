@@ -29,9 +29,12 @@ namespace DataCommunication.UserService
         [OperationContract]
         new void Insert(User user);
 
-        [OperationContract]
+        [OperationContract(Name = "rest_update")]
         [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "updateUser?id={id}&n={nom}&f={prenom}&m={mail}")]
         void Update(int id, string nom, string prenom, string mail);
+
+        [OperationContract]
+        new void Update(User user);
 
         [OperationContract]
         new void Delete(User user);

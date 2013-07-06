@@ -18,15 +18,14 @@ namespace DataAccess.UserRepositoriesImplementation
         {
             if (_source == null)
             {
-                _source = new List<User>();
-                Insert(new User
+                _source = new List<User> {new User
                 {
                     ID = 0,
                     Mail = "test",
                     Nom = "test",
                     Prenom = "test",
                     Password = "test"
-                });
+                }};
             }
         }
 

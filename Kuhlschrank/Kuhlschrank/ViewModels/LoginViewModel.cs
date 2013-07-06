@@ -101,25 +101,24 @@ namespace Kuhlschrank.ViewModels
 
         private void CheckUserPassword()
         {
-            //string message;
-            //User user = UserRepository.GetUserFromIdAndPassword(Identifiant, Password);
-            //if (user == null)
-            //    message = "L'utilisateur n'existe pas !";
-            //else if (user.Password != Password)
-            //    message = "Le couple utilisateur / mot de passe est incorrect";
-            //else
-            //{
-            //    message = "Vous êtes connecté !";
-            //    Context.ApplicationUser = user;
-            //    MenuView menu = new MenuView();
-            //    this.Context.HostWindow.Content = menu;
-            //}
-            //System.Windows.MessageBox.Show(message);
-
-            User user = new User() { ID = 1, Mail = "test@test.fr", Nom = "Paul", Prenom = "Jacques", Password = "toto" };
-            Context.ApplicationUser = user;
-            MenuView menu = new MenuView();
-            this.Context.HostWindow.Content = menu;
+            string message;
+            User user = UserRepository.GetUserFromIdAndPassword(Identifiant, Password);
+            if (user == null)
+            {
+                message = "L'utilisateur n'existe pas !";
+                System.Windows.MessageBox.Show(message);
+            }
+            else if (user.Password != Password)
+            {
+                message = "Le couple utilisateur / mot de passe est incorrect";
+                System.Windows.MessageBox.Show(message);
+            }
+            else
+            {
+                Context.ApplicationUser = user;
+                MenuView menu = new MenuView();
+                this.Context.HostWindow.Content = menu;
+            }
         }
 
         #endregion

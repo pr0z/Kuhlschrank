@@ -4,20 +4,24 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:helpers="clr-namespace:Common.Helpers;assembly=Common"
-        Background="Transparent"
         mc:Ignorable="d" 
         d:DesignHeight="300" d:DesignWidth="300">
 
   <UserControl.Resources>
+
+    <BitmapImage
+          x:Key="logo"
+          UriSource="/Common;component/Images/logo.png" />
+    
   </UserControl.Resources>
 
   <UserControl.InputBindings>
-    <KeyBinding Command="{Binding ClickCommand}"
+    <KeyBinding Command="{Binding CheckUserPasswordCommand}"
                 Gesture="Enter" />
   </UserControl.InputBindings>
 
 
-  <Grid>
+  <Grid Height="700">
     <Grid.RowDefinitions>
       <RowDefinition Height="30*"/>
       <RowDefinition Height="70*"/>
@@ -27,7 +31,7 @@
     </Grid.ColumnDefinitions>
 
     <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0">
-      <Label>ICI LOGO</Label>
+      <Image Source="{StaticResource logo}" Width="500" Height="150"/>
     </StackPanel>
 
     <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0">

@@ -41,7 +41,7 @@ namespace Kuhlschrank.ViewModels
             {
                 new TileModel(TileIdentity.ExploreContent) { Text = "Explorer le contenu", TileType = TileType.Website, Context = this.Context },
                 new TileModel(TileIdentity.ScanContent) { Text = "Scanner le contenu", TileType = TileType.Application, Context = this.Context },
-                new TileModel(TileIdentity.Settings) { Text = "Réglages", TileType = TileType.Browser, Context = this.Context  },
+                new TileModel(TileIdentity.Settings) { Text = "Réglages", TileType = TileType.Browser, Context = this.Context  }
             };
         }
         #endregion

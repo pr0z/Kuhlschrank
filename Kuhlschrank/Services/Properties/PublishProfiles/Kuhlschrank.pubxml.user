@@ -11,43 +11,79 @@ en modifiant ce fichier MSBuild. Pour en savoir plus à ce sujet, consultez la p
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Common.dll">
-      <publishTime>04/07/2013 14:12:57</publishTime>
+      <publishTime>07/06/2013 12:42:55</publishTime>
     </File>
     <File Include="bin/Common.pdb">
       <publishTime>04/07/2013 14:12:57</publishTime>
     </File>
     <File Include="bin/DataAccess.dll">
-      <publishTime>07/04/2013 14:21:15</publishTime>
+      <publishTime>07/06/2013 12:42:55</publishTime>
     </File>
     <File Include="bin/DataAccess.pdb">
       <publishTime>07/04/2013 14:21:15</publishTime>
     </File>
     <File Include="bin/DataCommunication.dll">
-      <publishTime>07/04/2013 14:21:15</publishTime>
+      <publishTime>07/06/2013 12:42:55</publishTime>
     </File>
     <File Include="bin/DataCommunication.pdb">
       <publishTime>07/04/2013 14:21:15</publishTime>
     </File>
     <File Include="bin/DataContracts.dll">
-      <publishTime>04/07/2013 14:12:57</publishTime>
+      <publishTime>07/06/2013 12:42:55</publishTime>
     </File>
     <File Include="bin/DataContracts.pdb">
       <publishTime>04/07/2013 14:12:57</publishTime>
     </File>
+    <File Include="bin/de/System.Windows.Interactivity.resources.dll">
+      <publishTime>02/18/2013 14:35:28</publishTime>
+    </File>
+    <File Include="bin/en/System.Windows.Interactivity.resources.dll">
+      <publishTime>02/18/2013 14:30:48</publishTime>
+    </File>
+    <File Include="bin/es/System.Windows.Interactivity.resources.dll">
+      <publishTime>02/18/2013 14:47:32</publishTime>
+    </File>
+    <File Include="bin/fr/System.Windows.Interactivity.resources.dll">
+      <publishTime>02/18/2013 14:39:06</publishTime>
+    </File>
+    <File Include="bin/it/System.Windows.Interactivity.resources.dll">
+      <publishTime>02/18/2013 14:42:50</publishTime>
+    </File>
+    <File Include="bin/ja/System.Windows.Interactivity.resources.dll">
+      <publishTime>02/18/2013 14:55:10</publishTime>
+    </File>
+    <File Include="bin/ko/System.Windows.Interactivity.resources.dll">
+      <publishTime>02/18/2013 14:50:46</publishTime>
+    </File>
+    <File Include="bin/ru/System.Windows.Interactivity.resources.dll">
+      <publishTime>02/18/2013 14:58:20</publishTime>
+    </File>
     <File Include="bin/Services.dll">
-      <publishTime>07/04/2013 14:21:15</publishTime>
+      <publishTime>07/06/2013 12:42:55</publishTime>
     </File>
     <File Include="bin/Services.pdb">
       <publishTime>07/04/2013 14:21:15</publishTime>
     </File>
+    <File Include="bin/System.Windows.Interactivity.dll">
+      <publishTime>02/18/2013 14:30:48</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Windows.Interactivity.resources.dll">
+      <publishTime>02/18/2013 15:06:10</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/System.Windows.Interactivity.resources.dll">
+      <publishTime>02/18/2013 15:01:34</publishTime>
+    </File>
+    <File Include="Device.svc">
+      <publishTime>07/06/2013 10:41:21</publishTime>
+    </File>
     <File Include="Product.svc">
-      <publishTime>07/04/2013 14:16:47</publishTime>
+      <publishTime>07/06/2013 10:41:21</publishTime>
     </File>
     <File Include="User.svc">
-      <publishTime>04/07/2013 14:08:53</publishTime>
+      <publishTime>07/06/2013 10:41:21</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/04/2013 14:21:29</publishTime>
+      <publishTime>07/06/2013 10:41:21</publishTime>
     </File>
   </ItemGroup>
 </Project>

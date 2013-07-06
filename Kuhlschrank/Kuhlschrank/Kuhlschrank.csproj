@@ -35,13 +35,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Practices.Prism">
-      <HintPath>..\..\..\KuhlschrankDLL\Microsoft.Practices.Prism.dll</HintPath>
+      <HintPath>D:\Dev Cours\Graphes\JourneyCalculator\bin\Debug\Microsoft.Practices.Prism.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>..\..\..\KuhlschrankDLL\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <HintPath>D:\Dev Cours\Graphes\JourneyCalculator\bin\Debug\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
     <Reference Include="ReuxablesLegacy">
-      <HintPath>..\..\..\KuhlschrankDLL\ReuxablesLegacy.dll</HintPath>
+      <HintPath>..\..\..\..\..\Downloads\legacy_100\LEGACY\ReuxablesLegacy.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -149,8 +149,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>COPY $(TargetPath) "C:\Users\RLEI\Dropbox\Projets 4AL\TestKuhlScrankTablette"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -76,8 +76,11 @@ namespace Kuhlschrank.ViewModels
         {
             CheckUserPasswordCommand = new DelegateCommand(CheckUserPassword, CanCheckUserPassword);
             Context = context;
+#if DEBUG
+            this.Identifiant = "test";
+#endif
         }
-        #endregion
+         #endregion
 
         #region COMMANDS AND CANEXECUTES
         private DelegateCommand _checkUserPasswordCommand;

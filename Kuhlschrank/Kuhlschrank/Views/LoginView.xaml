@@ -19,6 +19,11 @@
     <ImageBrush ImageSource="{StaticResource Background}" Stretch="UniformToFill" />
   </UserControl.Background>
 
+  <UserControl.InputBindings>
+    <KeyBinding Command="{Binding CheckUserPasswordCommand}"
+                Gesture="Enter" />
+  </UserControl.InputBindings>
+
 
   <Grid>
     <Grid.RowDefinitions>
@@ -53,7 +58,7 @@
             </Grid.ColumnDefinitions>
 
             <Label Width="110" Grid.Column="0">Identifiant</Label>
-            <TextBox Grid.Column="1" Text="{Binding Identifiant, UpdateSourceTrigger=PropertyChanged}" Width="170" Height="25"/>
+            <TextBox Grid.Column="1" Text="{Binding Identifiant, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="170" Height="25"/>
           </Grid>
         </StackPanel>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Row="2" Height="40">

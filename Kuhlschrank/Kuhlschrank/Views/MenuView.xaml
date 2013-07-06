@@ -21,6 +21,7 @@
   <UserControl.Background>
     <ImageBrush ImageSource="{StaticResource Background}" Stretch="UniformToFill" />
   </UserControl.Background>
+  
 
   <Grid>
     <Border x:Name="darkenBorder" Background="Black" Opacity="0.6" />

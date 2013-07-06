@@ -67,7 +67,7 @@ namespace Kuhlschrank.ViewModels
         {
             get
             {
-                return _userRepo ?? (_userRepo = new UserServiceRepository());
+                return _userRepo ?? (_userRepo = new UserListRepository());
             }
         }
         #endregion

@@ -36,6 +36,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationContext.cs" />
+    <Compile Include="Behavior\ItemsControlDragDropBehavior.cs" />
+    <Compile Include="Command\ActionCommand.cs" />
+    <Compile Include="Converters\TileTypeToColorConverter.cs" />
+    <Compile Include="Enums\TileIdentity.cs" />
+    <Compile Include="Enums\TileType.cs" />
     <Compile Include="Helpers\PasswordHelper.cs" />
     <Compile Include="Helpers\Tools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -53,12 +59,17 @@
     <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Repositories\ProductRepository\IProductRepository.cs" />
     <Compile Include="Repositories\UserRepository\IUserRepository.cs" />
+    <Compile Include="UI\TileModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataContracts\DataContracts.csproj">
       <Project>{5d40519e-fa43-491d-a8dd-75c92339b814}</Project>
       <Name>DataContracts</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\mainBackground.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

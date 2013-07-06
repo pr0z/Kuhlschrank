@@ -1,4 +1,6 @@
-﻿using Kuhlschrank.ViewModels;
+﻿using Common;
+using Kuhlschrank.Context;
+using Kuhlschrank.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +25,10 @@ namespace Kuhlschrank.Views
     {
         private BrowserViewModel _viewModel { get; set; }
 
-        public BrowserView()
+        public BrowserView(ApplicationContext context)
         {
             InitializeComponent();
+            _viewModel = new BrowserViewModel(context);
             this.DataContext = _viewModel;
         }
     }

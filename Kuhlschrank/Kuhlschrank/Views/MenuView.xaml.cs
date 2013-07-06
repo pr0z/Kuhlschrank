@@ -1,4 +1,6 @@
-﻿using Kuhlschrank.ViewModels;
+﻿using Common;
+using Kuhlschrank.Context;
+using Kuhlschrank.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,10 +24,10 @@ namespace Kuhlschrank.Views
     {
         private MenuViewModel viewModel { get; set; }
 
-        public MenuView()
+        public MenuView(ApplicationContext context)
         {
             InitializeComponent();
-            viewModel = new MenuViewModel();
+            viewModel = new MenuViewModel(context);
             this.DataContext = viewModel;
         }
     }

@@ -1,5 +1,7 @@
 ﻿using Common.Command;
 using Common.Enums;
+using Kuhlschrank.Context;
+using Kuhlschrank.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
 
-namespace Common.UI
+namespace Kuhlschrank.Controls
 {
     public class TileModel : INotifyPropertyChanged
     {
@@ -32,6 +34,9 @@ namespace Common.UI
         private TileIdentity _identity;
         public TileIdentity Identity { get { return _identity; } set { _identity = value; OnPropertyChanged("Identity"); } }
 
+        private ApplicationContext _context;
+        public ApplicationContext Context { get { return _context; } set { _context = value; OnPropertyChanged("Context"); } }
+
         public ICommand ClickCommand { get; private set; }
 
         public TileModel(TileIdentity identity)
@@ -48,7 +53,10 @@ namespace Common.UI
                     System.Windows.MessageBox.Show("scan");
                     break;
                 case TileIdentity.ExploreContent:
-                    System.Windows.MessageBox.Show("explore");
+                    {
+                        BrowserView browser = new BrowserView(this.Context);
+                        this.Context.HostWindow.SetView(browser);
+                    }
                     break;
                 case TileIdentity.Settings:
                     System.Windows.MessageBox.Show("settings");

@@ -13,6 +13,7 @@ using Kuhlschrank.Views;
 using Common.Repositories;
 using Common.Repositories.UserRepository;
 using DataAccess.UserRepositoriesImplementation;
+using Kuhlschrank.Context;
 
 namespace Kuhlschrank.ViewModels
 {
@@ -119,8 +120,12 @@ namespace Kuhlschrank.ViewModels
             else
             {
                 Context.ApplicationUser = user;
-                MenuView menu = new MenuView();
-                this.Context.HostWindow.Content = menu;
+                this.Context.HostWindow.IsLogged = true;
+                this.Context.HostWindow.Name = user.Nom;
+                this.Context.HostWindow.FirstName = user.Prenom;
+
+                MenuView menu = new MenuView(Context);
+                this.Context.HostWindow.SetView(menu);
             }
         }
 

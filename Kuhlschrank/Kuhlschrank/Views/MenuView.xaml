@@ -6,25 +6,15 @@
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:conv="clr-namespace:Common.Converters;assembly=Common"
              xmlns:behavior="clr-namespace:Common.Behavior;assembly=Common"
+             Background="Transparent"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
 
   <UserControl.Resources>
     <conv:TileTypeToColorConverter x:Key="TileTypeToColorConverter" />
-
-    <BitmapImage
-        x:Key="Background"
-        UriSource="/Common;component/Images/mainBackground.jpg" />
   </UserControl.Resources>
-
-
-  <UserControl.Background>
-    <ImageBrush ImageSource="{StaticResource Background}" Stretch="UniformToFill" />
-  </UserControl.Background>
   
-
-  <Grid>
-    <Border x:Name="darkenBorder" Background="Black" Opacity="0.6" />
+  <Grid Height="500">
     <ItemsControl ItemsSource="{Binding Tiles}" Background="Transparent" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
       <i:Interaction.Behaviors>
         <behavior:ItemsControlDragDropBehavior />

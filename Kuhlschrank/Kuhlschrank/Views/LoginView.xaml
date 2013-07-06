@@ -4,23 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:helpers="clr-namespace:Common.Helpers;assembly=Common"
+        Background="Transparent"
         mc:Ignorable="d" 
         d:DesignHeight="300" d:DesignWidth="300">
 
   <UserControl.Resources>
-
-    <BitmapImage
-        x:Key="Background"
-        UriSource="/Common;component/Images/mainBackground.jpg" />
   </UserControl.Resources>
 
-
-  <UserControl.Background>
-    <ImageBrush ImageSource="{StaticResource Background}" Stretch="UniformToFill" />
-  </UserControl.Background>
-
   <UserControl.InputBindings>
-    <KeyBinding Command="{Binding CheckUserPasswordCommand}"
+    <KeyBinding Command="{Binding ClickCommand}"
                 Gesture="Enter" />
   </UserControl.InputBindings>
 

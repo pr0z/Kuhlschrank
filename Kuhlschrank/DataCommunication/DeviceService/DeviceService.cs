@@ -1,5 +1,5 @@
 ﻿using Common.Repositories.DeviceRepository;
-using DataAccess.DeviceRepositoryImplementation;
+using DataAccess.DeviceRepositoriesImplementation;
 using DataContracts;
 using System;
 using System.Collections.Generic;

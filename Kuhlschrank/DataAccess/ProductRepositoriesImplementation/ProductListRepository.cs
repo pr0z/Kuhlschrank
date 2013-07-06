@@ -11,7 +11,6 @@ namespace DataAccess.ProductRepositoriesImplementation
     public class ProductListRepository : IProductRepository
     {
         private static List<Product> _source;
-
         public ProductListRepository()
         {
             if (_source == null)
@@ -20,7 +19,7 @@ namespace DataAccess.ProductRepositoriesImplementation
                 _source = new List<Product>();
                 for (int i = 0; i < 15; i++)
                 {
-                    Insert(new Product()
+                    _source.Add(new Product()
                     {
                         ID = i,
                         Libelle = "Produit " + i,
@@ -32,7 +31,7 @@ namespace DataAccess.ProductRepositoriesImplementation
 
         public DataContracts.Product GetById(int id)
         {
-            throw new NotImplementedException();
+            return _source.First(o => o.ID == id);
         }
 
         public List<DataContracts.Product> GetAll()
@@ -47,12 +46,17 @@ namespace DataAccess.ProductRepositoriesImplementation
 
         public void Update(DataContracts.Product entity)
         {
-            throw new NotImplementedException();
+            Product prod = _source.First(o => o.ID == entity.ID);
+            if (prod != null)
+            {
+                prod.IdCategory = entity.IdCategory;
+                prod.Libelle = entity.Libelle;
+            }
         }
 
         public void Delete(DataContracts.Product entity)
         {
-            throw new NotImplementedException();
+            _source.RemoveAll(o => o.ID == entity.ID);
         }
     }
 }

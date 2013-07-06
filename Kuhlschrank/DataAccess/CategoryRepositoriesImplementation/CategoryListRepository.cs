@@ -11,10 +11,24 @@ namespace DataAccess.CategoryRepositoriesImplementation
     public class CategoryListRepository : ICategoryRepository
     {
         private static List<Category> _source;
+        public CategoryListRepository()
+        {
+            if (_source == null)
+            {
+                _source = new List<Category>
+                {
+                    new Category
+                    {
+                        ID = 0,
+                        Libelle = "test"
+                    }
+                };
+            }
+        }
 
         public DataContracts.Category GetById(int id)
         {
-            throw new NotImplementedException();
+            return _source.First(o => o.ID == id);
         }
 
         public List<DataContracts.Category> GetAll()
@@ -29,12 +43,16 @@ namespace DataAccess.CategoryRepositoriesImplementation
 
         public void Update(DataContracts.Category entity)
         {
-            throw new NotImplementedException();
+            Category cat = _source.First(o => o.ID == entity.ID);
+            if (cat != null)
+            {
+                cat.Libelle = entity.Libelle;
+            }
         }
 
         public void Delete(DataContracts.Category entity)
         {
-            throw new NotImplementedException();
+            _source.RemoveAll(o => o.ID == entity.ID);
         }
     }
 }

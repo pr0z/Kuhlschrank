@@ -16,5 +16,29 @@ namespace DataCommunication.ProductService
         {
             return _productRepo.GetAll();
         }
+
+        #region IRepository<Product> Membres
+
+        public DataContracts.Product GetById(int id)
+        {
+            return _productRepo.GetById(id);
+        }
+
+        public void Insert(DataContracts.Product entity)
+        {
+            _productRepo.Insert(entity);
+        }
+
+        public void Update(DataContracts.Product entity)
+        {
+            _productRepo.Update(entity);
+        }
+
+        public void Delete(DataContracts.Product entity)
+        {
+            _productRepo.Delete(entity);
+        }
+
+        #endregion
     }
 }

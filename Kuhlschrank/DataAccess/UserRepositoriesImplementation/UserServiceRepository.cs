@@ -26,7 +26,7 @@ namespace DataAccess.UserRepositoriesImplementation
 
         User IRepository<User>.GetById(int id)
         {
-            return MyWebServices.UserService.GetUserById(id);
+            return MyWebServices.UserService.GetById(id);
         }
 
         List<User> IRepository<User>.GetAll()

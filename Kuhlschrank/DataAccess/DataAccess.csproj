@@ -44,12 +44,19 @@
   <ItemGroup>
     <Compile Include="AccessBD\AccessBD.cs" />
     <Compile Include="CategoryRepositoriesImplementation\CategoryListRepository.cs" />
+    <Compile Include="CategoryRepositoriesImplementation\CategoryServiceRepository.cs" />
     <Compile Include="CategoryRepositoriesImplementation\CategorySqlServerRepository.cs" />
-    <Compile Include="DeviceRepositoryImplementation\DeviceListRepository.cs" />
-    <Compile Include="DeviceRepositoryImplementation\DeviceSqlServerRepository.cs" />
+    <Compile Include="DeviceRepositoriesImplementation\DeviceListRepository.cs" />
+    <Compile Include="DeviceRepositoriesImplementation\DeviceServiceRepository.cs" />
+    <Compile Include="DeviceRepositoriesImplementation\DeviceSqlServerRepository.cs" />
     <Compile Include="ProductRepositoriesImplementation\ProductListRepository.cs" />
     <Compile Include="ProductRepositoriesImplementation\ProductServiceRepository.cs" />
     <Compile Include="ProductRepositoriesImplementation\ProductSqlServerRepository.cs" />
+    <Compile Include="Service References\CategoryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\DeviceService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -78,9 +85,20 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\DataContracts.Category.datasource" />
     <None Include="Properties\DataSources\DataContracts.Device.datasource" />
     <None Include="Properties\DataSources\DataContracts.Product.datasource" />
     <None Include="Properties\DataSources\DataContracts.User.datasource" />
+    <None Include="Service References\CategoryService\Category.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CategoryService\Category1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CategoryService\Category2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CategoryService\CategoryService.wsdl" />
     <None Include="Service References\DeviceService\Device.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -123,6 +141,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CategoryService\" />
     <WCFMetadataStorage Include="Service References\DeviceService\" />
     <WCFMetadataStorage Include="Service References\ProductService\" />
     <WCFMetadataStorage Include="Service References\UserService\" />
@@ -172,9 +191,25 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CategoryService\Category.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CategoryService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CategoryService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CategoryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>COPY $(TargetPath) "C:\Users\RLEI\Dropbox\Projets 4AL\TestKuhlScrankTablette"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

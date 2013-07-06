@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f5ea704c-f748-4540-99dd-48be45c9b56c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1966/Device.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Device.xsd" MetadataType="Schema" ID="c25f7874-3c20-481a-a1fb-83b025cbb3b8" SourceId="1" SourceUrl="http://localhost:1966/Device.svc?xsd=xsd1" />
+    <MetadataFile FileName="Device1.xsd" MetadataType="Schema" ID="ddfcec20-217c-4003-9cc0-5c80f9286f27" SourceId="1" SourceUrl="http://localhost:1966/Device.svc?xsd=xsd0" />
+    <MetadataFile FileName="DeviceService.wsdl" MetadataType="Wsdl" ID="7892ac4e-f260-48de-884f-fc9cc3ded527" SourceId="1" SourceUrl="http://localhost:1966/Device.svc?wsdl" />
+    <MetadataFile FileName="Device.disco" MetadataType="Disco" ID="9207a96d-48d6-491b-80cd-799686e20de5" SourceId="1" SourceUrl="http://localhost:1966/Device.svc?disco" />
+    <MetadataFile FileName="Device2.xsd" MetadataType="Schema" ID="8aa18614-b532-4b6a-8772-40b855817fc5" SourceId="1" SourceUrl="http://localhost:1966/Device.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

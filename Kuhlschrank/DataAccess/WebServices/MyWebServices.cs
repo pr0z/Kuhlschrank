@@ -29,5 +29,37 @@ namespace DataAccess.WebServices
             }
         }
         #endregion
+
+        #region ProductService
+        private static ProductService.ProductServiceClient _upc;
+        public static ProductService.ProductServiceClient ProductService
+        {
+            get
+            {
+                if (_upc == null || !IsInGoodState(_upc.State))
+                {
+                    _upc = new ProductService.ProductServiceClient();
+                    _upc.Open();
+                }
+                return _upc;
+            }
+        }
+        #endregion
+        
+        #region DeviceService
+        private static DeviceService.DeviceServiceClient _udc;
+        public static DeviceService.DeviceServiceClient DeviceService
+        {
+            get
+            {
+                if (_udc == null || !IsInGoodState(_udc.State))
+                {
+                    _udc = new DeviceService.DeviceServiceClient();
+                    _udc.Open();
+                }
+                return _udc;
+            }
+        }
+        #endregion
     }
 }

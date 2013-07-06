@@ -6,10 +6,10 @@ using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Repositories.DeviceRepository
+namespace Common.Repositories.CategoryRepository
 {
-    [ServiceContract] 
-    public interface IDeviceRepository : IRepository<Device>
+    [ServiceContract]   
+    public interface ICategoryRepository : IRepository<Category>
     {
     }
 }

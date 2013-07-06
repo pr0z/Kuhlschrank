@@ -22,7 +22,7 @@ namespace DataCommunication.UserService
             return _userRepo.GetUserFromIdAndPassword(identifier, password);
         }
 
-        public User GetUserById(int id)
+        public User GetById(int id)
         {
             return _userRepo.GetById(id);
         }
@@ -37,6 +37,11 @@ namespace DataCommunication.UserService
             _userRepo.Insert(user);
         }
 
+        public void Update(User entity)
+        {
+            _userRepo.Update(entity);
+        }
+
         public void Update(int id, string nom, string prenom, string mail)
         {
             User user = _userRepo.GetAll().Where(o => o.ID == id).FirstOrDefault();
@@ -46,7 +51,7 @@ namespace DataCommunication.UserService
                 user.Prenom = prenom;
                 user.Mail = mail;
 
-                _userRepo.Update(user);
+                Update(user);
             }
         }
 

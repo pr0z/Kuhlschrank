@@ -11,7 +11,7 @@
 
     <BitmapImage
         x:Key="Background"
-        UriSource="C:\Users\RLEI\Documents\GitHub\Kuhlschrank\Kuhlschrank\Common\Images\mainBackground.jpg" />
+        UriSource="/Common;component/Images/mainBackground.jpg" />
   </UserControl.Resources>
 
 

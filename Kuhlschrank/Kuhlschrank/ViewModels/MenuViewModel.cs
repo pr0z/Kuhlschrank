@@ -7,12 +7,25 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Practices.Prism.Commands;
 
 namespace Kuhlschrank.ViewModels
 {
-    public class MenuViewModel
+    public class MenuViewModel : INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        private DelegateCommand _openBrowserCommand;
+        public DelegateCommand OpenBrowserCommand
+        {
+            get { return _openBrowserCommand; }
+            set
+            {
+                if (_openBrowserCommand != value)
+                {
+                    _openBrowserCommand = value;
+                    OnPropertyChanged("OpenBrowserCommand");
+                }
+            }
+        }
         private void OnPropertyChanged(string propertyName)
         {
             if (this.PropertyChanged != null)
@@ -30,6 +43,10 @@ namespace Kuhlschrank.ViewModels
                 new TileModel(TileIdentity.ScanContent) { Text = "Scanner le contenu", TileType = TileType.Application },
                 new TileModel(TileIdentity.Settings) { Text = "Réglages", TileType = TileType.Browser  },
             };
+
+
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

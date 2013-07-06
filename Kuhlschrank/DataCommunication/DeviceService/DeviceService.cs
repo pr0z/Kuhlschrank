@@ -30,7 +30,7 @@ namespace DataCommunication.DeviceService
 
         public void Register(string type, string uniqueIdentifier, int userId)
         {
-            _repo.Insert(new Device()
+            Insert(new Device()
             {
                 type = type,
                 uniqueIdentifier = uniqueIdentifier,
@@ -40,7 +40,7 @@ namespace DataCommunication.DeviceService
 
         public void Update(DataContracts.Device device)
         {
-            throw new NotImplementedException();
+            _repo.Update(device);
         }
 
         public void Delete(string uniqueIdentifier)
@@ -48,8 +48,19 @@ namespace DataCommunication.DeviceService
             Device item = _repo.GetAll().Where(o => o.uniqueIdentifier == uniqueIdentifier).FirstOrDefault();
             if (item != null)
             {
-                _repo.Delete(item);
+                Delete(item);
             }
+        }
+
+
+        public void Insert(Device entity)
+        {
+            _repo.Insert(entity);
+        }
+
+        public void Delete(Device entity)
+        {
+            _repo.Delete(entity);
         }
     }
 }

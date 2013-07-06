@@ -43,8 +43,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessBD\AccessBD.cs" />
+    <Compile Include="CategoryRepositoriesImplementation\CategoryListRepository.cs" />
+    <Compile Include="CategoryRepositoriesImplementation\CategorySqlServerRepository.cs" />
+    <Compile Include="DeviceRepositoryImplementation\DeviceListRepository.cs" />
     <Compile Include="DeviceRepositoryImplementation\DeviceSqlServerRepository.cs" />
     <Compile Include="ProductRepositoriesImplementation\ProductListRepository.cs" />
+    <Compile Include="ProductRepositoriesImplementation\ProductServiceRepository.cs" />
+    <Compile Include="ProductRepositoriesImplementation\ProductSqlServerRepository.cs" />
+    <Compile Include="Service References\DeviceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProductService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\UserService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -60,8 +75,32 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\DataContracts.Device.datasource" />
+    <None Include="Properties\DataSources\DataContracts.Product.datasource" />
     <None Include="Properties\DataSources\DataContracts.User.datasource" />
+    <None Include="Service References\DeviceService\Device.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeviceService\Device1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeviceService\Device2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeviceService\DeviceService.wsdl" />
+    <None Include="Service References\ProductService\Product.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductService\Product1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductService\Product2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductService\ProductService.wsdl" />
     <None Include="Service References\UserService\User.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -84,6 +123,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DeviceService\" />
+    <WCFMetadataStorage Include="Service References\ProductService\" />
     <WCFMetadataStorage Include="Service References\UserService\" />
   </ItemGroup>
   <ItemGroup>
@@ -101,7 +142,36 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Service References\ProductService\Product.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeviceService\Device.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeviceService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeviceService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeviceService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

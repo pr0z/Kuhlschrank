@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Practices.Prism.Commands;
 using System.ComponentModel;
+using Kuhlschrank.ChildWindows.Views;
 
 namespace Kuhlschrank.ViewModels
 {
@@ -23,6 +24,20 @@ namespace Kuhlschrank.ViewModels
                 {
                     _loadVisible = value;
                     NotifyPropertyChanged("LoadVisible");
+                }
+            }
+        }
+
+        private ApplicationContext _context;
+        public ApplicationContext Context
+        {
+            get { return _context; }
+            set
+            {
+                if (_context != value)
+                {
+                    _context = value;
+                    NotifyPropertyChanged("Context");
                 }
             }
         }
@@ -66,7 +81,7 @@ namespace Kuhlschrank.ViewModels
         {
             this.StartCommand = new DelegateCommand(StartAction, canStart);
             this.StopCommand = new DelegateCommand(StopAction, canStop);
-
+            this.Context = context;
             this.LoadVisible = false;
         }
         #endregion
@@ -90,6 +105,8 @@ namespace Kuhlschrank.ViewModels
         private void StopAction()
         {
             this.LoadVisible = false;
+            CWUnrecognizedProduct cw = new CWUnrecognizedProduct(this.Context, @"C:\Users\RLEI\Pictures\Products\2.png");
+            cw.ShowDialog();
         }
             
         #endregion

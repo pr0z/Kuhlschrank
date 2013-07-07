@@ -18,7 +18,7 @@ namespace DataAccess
             {
                 if (_connection == null || _connection.State == System.Data.ConnectionState.Closed || _connection.State == System.Data.ConnectionState.Broken)
                 {
-                    _connection = new SqlConnection(ConfigurationManager.ConnectionStrings["LanDb"].ConnectionString);
+                    _connection = new SqlConnection(ConfigurationManager.ConnectionStrings["RomanLocalDb"].ConnectionString);
                     _connection.Open();
                 }
                 return _connection;

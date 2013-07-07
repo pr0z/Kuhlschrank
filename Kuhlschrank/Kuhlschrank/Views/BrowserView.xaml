@@ -55,23 +55,25 @@
 
   </UserControl.Resources>
 
-  <Grid Height="700">
+  <Grid Height="800">
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="17*"/>
       <ColumnDefinition Width="80*"/>
     </Grid.ColumnDefinitions>
 
     <StackPanel
+      Height="800"
       Grid.Column="0">
+      <StackPanel.Background>
+        <SolidColorBrush Color="Black" Opacity="0.4" />
+      </StackPanel.Background>
       <ListView
         x:Name="list"
         Height="800"
         BorderBrush="Transparent"
+        Background="Transparent"
         ItemsSource="{Binding ListCategory, UpdateSourceTrigger=PropertyChanged}"
         SelectedItem="{Binding SelectedItem}">
-        <ListView.Background>
-          <SolidColorBrush Color="Black" Opacity="0.4" />
-        </ListView.Background>
         <ListView.ItemTemplate>
           <DataTemplate>
             <StackPanel

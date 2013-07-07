@@ -50,7 +50,10 @@ namespace Kuhlschrank.Controls
             switch (this.Identity)
             {
                 case TileIdentity.ScanContent:
-                    System.Windows.MessageBox.Show("scan");
+                    {
+                        FridgeScannerView scanner = new FridgeScannerView(this.Context);
+                        this.Context.HostWindow.SetView(scanner);
+                    }
                     break;
                 case TileIdentity.ExploreContent:
                     {

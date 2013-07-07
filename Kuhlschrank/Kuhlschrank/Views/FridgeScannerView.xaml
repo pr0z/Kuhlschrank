@@ -1,0 +1,218 @@
+﻿<UserControl x:Class="Kuhlschrank.Views.FridgeScannerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:conv="clr-namespace:Common.Converters;assembly=Common"
+             xmlns:local="clr-namespace:Kuhlschrank.Controls.LoadControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+  <UserControl.Resources>
+
+    <BitmapImage
+          x:Key="Start"
+          UriSource="/Common;component/Images/start-icon.png" />
+
+    <BitmapImage
+          x:Key="Stop"
+          UriSource="/Common;component/Images/stop-icon.png" />
+
+    <Style x:Key="TransparentButton" TargetType="{x:Type Button}">
+      <Setter Property="HorizontalContentAlignment" Value="Center"/>
+      <Setter Property="VerticalContentAlignment" Value="Center"/>
+      <Setter Property="Padding" Value="1"/>
+      <Setter Property="Template">
+        <Setter.Value>
+          <ControlTemplate TargetType="{x:Type Button}">
+            <Border x:Name="border" BorderThickness="2" BorderBrush="Transparent">
+              <ContentPresenter></ContentPresenter>
+            </Border>
+            <ControlTemplate.Triggers>
+              <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="BorderBrush" TargetName="border" Value="Transparent"/>
+              </Trigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+
+    <conv:BoolToVisibilityConverter
+      x:Key="BoolToVisibilityConverter" />
+    
+  </UserControl.Resources>
+
+  <Grid Height="700">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="17*"/>
+      <ColumnDefinition Width="80*"/>
+    </Grid.ColumnDefinitions>
+
+    <StackPanel
+        Grid.Column="0"
+        Height="700">
+      <StackPanel.Background>
+        <SolidColorBrush Color="Black" Opacity="0.4" />
+      </StackPanel.Background>
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="10*"/>
+          <RowDefinition Height="10*"/>
+          <RowDefinition Height="20*"/>
+          <RowDefinition Height="20*"/>
+          <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel
+          Grid.Row="0">
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="50*" />
+              <ColumnDefinition Width="50*" />
+            </Grid.ColumnDefinitions>
+            <Button
+              Grid.Column="0"
+              Height="32"
+              Width="32"
+              Style="{StaticResource TransparentButton}"
+              Command="{Binding StopCommand}"
+              HorizontalAlignment="Right">
+              <Image Source="{StaticResource Stop}" />
+            </Button>
+            <Button
+              Grid.Column="1"
+              Height="32"
+              Width="32"
+              Command="{Binding StartCommand}"
+              Style="{StaticResource TransparentButton}"
+              HorizontalAlignment="Left">
+              <Image Source="{StaticResource Start}" />
+            </Button>
+          </Grid>
+        </StackPanel>
+
+        <TextBlock 
+          Text="Eléments analysés" 
+          Grid.Row="1"
+          Margin="0,15,0,0"
+          HorizontalAlignment="Center"
+          FontSize="16"
+          FontWeight="Bold"/>
+
+        <StackPanel
+          Grid.Row="2"
+          Height="200">
+          <Grid
+            Margin="5,20,0,0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="10*" />
+              <RowDefinition Height="90*" />
+            </Grid.RowDefinitions>
+            <TextBlock
+              Grid.Row="0"
+              Text="Boissons"
+              FontSize="14"
+              FontWeight="Bold"/>
+            <ListBox 
+              Background="Transparent"
+              Height="150"
+              BorderBrush="Transparent"
+              Grid.Row="1">
+              <ListBoxItem>
+                <TextBlock Text="> Bouteilles de coca" />
+              </ListBoxItem>
+              <ListBoxItem>
+                <TextBlock Text="> Bouteilles de jus d'orange" />
+              </ListBoxItem>
+              <ListBoxItem>
+                <TextBlock Text="> Bouteilles d'eau" />
+              </ListBoxItem>
+            </ListBox>
+          </Grid>
+        </StackPanel>
+
+        <StackPanel
+          Grid.Row="3"
+          Height="200">
+          <Grid
+            Margin="5,20,0,0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="10*" />
+              <RowDefinition Height="90*" />
+            </Grid.RowDefinitions>
+            <TextBlock
+              Grid.Row="0"
+              Text="Produits laitiers"
+              FontSize="14"
+              FontWeight="Bold"/>
+            <ListBox 
+              Background="Transparent"
+              Height="150"
+              BorderBrush="Transparent"
+              Grid.Row="1">
+              <ListBoxItem>
+                <TextBlock Text="> Bouteilles de coca" />
+              </ListBoxItem>
+              <ListBoxItem>
+                <TextBlock Text="> Bouteilles de jus d'orange" />
+              </ListBoxItem>
+              <ListBoxItem>
+                <TextBlock Text="> Bouteilles d'eau" />
+              </ListBoxItem>
+            </ListBox>
+          </Grid>
+        </StackPanel>
+
+        <StackPanel
+          Grid.Row="4"
+          Height="200">
+          <Grid
+            Margin="5,10,0,0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="10*" />
+              <RowDefinition Height="90*" />
+            </Grid.RowDefinitions>
+            <TextBlock
+              Grid.Row="0"
+              Text="Fruits et légumes"
+              FontSize="14"
+              FontWeight="Bold"/>
+            <ListBox 
+              Background="Transparent"
+              Height="150"
+              BorderBrush="Transparent"
+              Grid.Row="1">
+              <ListBoxItem>
+                <TextBlock Text="> Bouteilles de coca" />
+              </ListBoxItem>
+              <ListBoxItem>
+                <TextBlock Text="> Bouteilles de jus d'orange" />
+              </ListBoxItem>
+              <ListBoxItem>
+                <TextBlock Text="> Bouteilles d'eau" />
+              </ListBoxItem>
+            </ListBox>
+          </Grid>
+        </StackPanel>
+      </Grid>
+    </StackPanel>
+
+    <StackPanel
+      Grid.Column="1"
+      Height="500"
+      Visibility="{Binding LoadVisible, Mode=TwoWay, Converter={StaticResource BoolToVisibilityConverter}}"
+      Orientation="Vertical">
+      
+      <local:LoadControl
+        Margin="45,20,0,0"
+        VerticalAlignment="Center"/>
+
+      <TextBlock
+        Text="Le moteur analyse le contenu de votre réfrigérateur..."
+        FontSize="28"
+        Margin="250,50,0,0"
+        VerticalAlignment="Center"
+        FontWeight="Bold" />
+    </StackPanel>
+  </Grid>
+</UserControl>

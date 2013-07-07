@@ -55,6 +55,7 @@
     <Compile Include="Converters\TileTypeToColorConverter.cs" />
     <Compile Include="Enums\TileIdentity.cs" />
     <Compile Include="Enums\TileType.cs" />
+    <Compile Include="Extensions\ExtensionMethods.cs" />
     <Compile Include="Helpers\PasswordHelper.cs" />
     <Compile Include="Helpers\Tools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Repositories\ProductRepository\IProductRepository.cs" />
     <Compile Include="Repositories\UserRepository\IUserRepository.cs" />
+    <Compile Include="Types\Pair.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataContracts\DataContracts.csproj">
@@ -87,6 +89,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\user-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\valid-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bottle-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

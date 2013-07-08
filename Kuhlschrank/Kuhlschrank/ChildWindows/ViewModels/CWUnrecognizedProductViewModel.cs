@@ -46,6 +46,20 @@ namespace Kuhlschrank.ChildWindows.ViewModels
             }
         }
 
+        private Product _selectedItem;
+        public Product SelectedItem
+        {
+            get { return _selectedItem; }
+            set
+            {
+                if (_selectedItem != value)
+                {
+                    _selectedItem = value;
+                    NotifyPropertyChanged("SelectedItem");
+                }
+            }
+        }
+        
         private IProductRepository _productRepo;
         public IProductRepository ProductRepo
         {
@@ -69,6 +83,48 @@ namespace Kuhlschrank.ChildWindows.ViewModels
             }
         }
 
+        private string _eanCode;
+        public string EanCode
+        {
+            get { return _eanCode; }
+            set
+            {
+                if (_eanCode != value)
+                {
+                    _eanCode = value;
+                    NotifyPropertyChanged("EanCode");
+                }
+            }
+        }
+
+        private string _libelle;
+        public string Libelle
+        {
+            get { return _libelle; }
+            set
+            {
+                if (_libelle != value)
+                {
+                    _libelle = value;
+                    NotifyPropertyChanged("Libelle");
+                }
+            }
+        }
+
+        private int _idCategory;
+        public int IdCategory
+        {
+            get { return _idCategory; }
+            set
+            {
+                if (_idCategory != value)
+                {
+                    _idCategory = value;
+                    NotifyPropertyChanged("IdCategory");
+                }
+            }
+        }
+
         private Window _view;
         public Window View
         {
@@ -82,6 +138,21 @@ namespace Kuhlschrank.ChildWindows.ViewModels
                 }
             }
         }
+
+        private Product _productToAdd;
+        public Product ProductToAdd
+        {
+            get { return _productToAdd; }
+            set
+            {
+                if (_productToAdd != value)
+                {
+                    _productToAdd = value;
+                    NotifyPropertyChanged("ProductToAdd");
+                }
+            }
+        }
+ 
         #endregion
 
         #region COMMANDS
@@ -112,9 +183,24 @@ namespace Kuhlschrank.ChildWindows.ViewModels
                 }
             }
         }
+
+        private DelegateCommand _validateCommand;
+        public DelegateCommand ValidateCommand
+        {
+            get { return _validateCommand; }
+            set
+            {
+                if (_validateCommand != value)
+                {
+                    _validateCommand = value;
+                    NotifyPropertyChanged("ValidateCommand");
+                }
+            }
+        }
         #endregion
 
-        public CWUnrecognizedProductViewModel(ApplicationContext context, string fileName, Window view)
+        #region CTOR
+        public CWUnrecognizedProductViewModel(ApplicationContext context, string fileName, Window view, string ean13)
         {
             ImageSource = new BitmapImage();
             ImageSource.BeginInit();
@@ -123,10 +209,13 @@ namespace Kuhlschrank.ChildWindows.ViewModels
 
             this.FilterCommand = new DelegateCommand(FilterAction, canFilter);
             this.CloseCommand = new DelegateCommand(CloseAction);
+            this.ValidateCommand = new DelegateCommand(ValidateAction, canValidate);
 
             this.View = view;
-            this.AllProducts = ProductRepo.GetAll();
+            this.AllProducts = ProductRepo.GetAll().OrderBy(o => o.Libelle).ToList();
+            this.EanCode = ean13;
         }
+        #endregion
 
         #region ACTIONS AND CANEXECUTES
         private bool canFilter()
@@ -136,12 +225,43 @@ namespace Kuhlschrank.ChildWindows.ViewModels
 
         private void FilterAction()
         {
-            this.AllProducts = this.AllProducts.Where(o => o.Libelle.ToLower().Contains(this.Filter)).ToList();
+            this.AllProducts = this.AllProducts.Where(o => o.Libelle.ToLower().Contains(this.Filter)).OrderBy(o => o.Libelle).ToList();
         }
 
         private void CloseAction()
         {
             this.View.Close();
+            this.View.DialogResult = false;
+        }
+
+        private bool canValidate()
+        {
+            return (this.SelectedItem != null) || (!String.IsNullOrEmpty(this.EanCode) && !String.IsNullOrEmpty(this.Libelle) && this.IdCategory != 0);
+        }
+
+        private void ValidateAction()
+        {
+            if (!String.IsNullOrEmpty(this.EanCode) && !String.IsNullOrEmpty(this.Libelle) && this.IdCategory != 0)
+            {
+                this.ProductToAdd = new Product();
+                this.ProductToAdd.IdCategory = this.IdCategory;
+                this.ProductToAdd.Libelle = this.Libelle;
+                this.ProductToAdd.Code = this.EanCode;
+
+                ProductRepo.Insert(this.ProductToAdd);
+                this.View.DialogResult = true;
+            }
+
+            if (SelectedItem != null)
+            {
+                this.ProductToAdd = SelectedItem;
+                this.View.DialogResult = true;
+            }
+        }
+
+        public Product GetProduct()
+        {
+            return this.ProductToAdd;
         }
         #endregion
 
@@ -154,6 +274,9 @@ namespace Kuhlschrank.ChildWindows.ViewModels
 
             if (this.FilterCommand != null)
                 this.FilterCommand.RaiseCanExecuteChanged();
+
+            if (this.ValidateCommand != null)
+                this.ValidateCommand.RaiseCanExecuteChanged();
         }
         #endregion
     }

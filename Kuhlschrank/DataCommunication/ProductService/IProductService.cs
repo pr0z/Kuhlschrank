@@ -22,6 +22,10 @@ namespace DataCommunication.ProductService
         new Product GetById(int id);
 
         [OperationContract]
+        [WebGet(ResponseFormat = WebMessageFormat.Json)]
+        new Product GetByEan13(string ean13);
+
+        [OperationContract]
         new void Insert(Product entity);
 
         [OperationContract]

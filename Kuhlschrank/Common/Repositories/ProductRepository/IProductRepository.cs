@@ -10,5 +10,6 @@ namespace Common.Repositories.ProductRepository
 {
     public interface IProductRepository : IRepository<Product>
     {
+        DataContracts.Product GetByEan13(string ean13);
     }
 }

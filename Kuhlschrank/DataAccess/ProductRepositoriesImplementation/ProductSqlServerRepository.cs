@@ -28,6 +28,20 @@ namespace DataAccess.ProductRepositoriesImplementation
             }
         }
 
+        public DataContracts.Product GetByEan13(string ean13)
+        {
+            string query = string.Format("SELECT * FROM PRODUCT WHERE ean='{0}';", ean13);
+            using (SqlCommand cmd = AccessBD.Connection.CreateCommand())
+            {
+                cmd.CommandText = query;
+
+                using (IDataReader reader = cmd.ExecuteReader())
+                {
+                    return MapPRODUCTbo(reader).FirstOrDefault();
+                }
+            }
+        }
+
         public List<DataContracts.Product> GetAll()
         {
             string query = string.Format("SELECT * FROM PRODUCT");
@@ -43,7 +57,7 @@ namespace DataAccess.ProductRepositoriesImplementation
 
         public void Insert(DataContracts.Product entity)
         {
-            string query = string.Format("INSERT INTO PRODUCT(libelle, id_category) VALUES('{0}',{1});", entity.Libelle, entity.IdCategory);
+            string query = string.Format("INSERT INTO PRODUCT(libelle, id_category, ean) VALUES('{0}',{1},'{2}');", entity.Libelle, entity.IdCategory, entity.Code);
             using (SqlCommand cmd = AccessBD.Connection.CreateCommand())
             {
                 cmd.CommandText = query;
@@ -81,6 +95,7 @@ namespace DataAccess.ProductRepositoriesImplementation
                     ID = Tools.ChangeType<int>(dataReader["id"]),
                     Libelle = Tools.ChangeType<string>(dataReader["libelle"]),
                     IdCategory = Tools.ChangeType<int>(dataReader["id_category"]),
+                    Code = Tools.ChangeType<string>(dataReader["ean"])
                 };
                 list.Add(product);
             }

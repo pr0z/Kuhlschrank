@@ -8,15 +8,13 @@ using System.Threading.Tasks;
 namespace DataContracts
 {
     [DataContract]
-    public class Product : Entity
+    public class UseProducts : Entity
     {
         [DataMember]
-        public string Libelle { get; set; }
-
+        public int IdProduct { get; set; }
         [DataMember]
-        public int IdCategory { get; set; }
-
+        public int IdUser { get; set; }
         [DataMember]
-        public string Code { get; set; }
+        public int Quantity { get; set; }
     }
 }

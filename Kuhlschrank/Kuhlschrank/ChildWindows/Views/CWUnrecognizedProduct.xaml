@@ -162,6 +162,7 @@
             <DataGrid
               ItemsSource="{Binding AllProducts}"
               AutoGenerateColumns="False"
+              SelectedItem="{Binding SelectedItem}"
               IsReadOnly="True"
               Width="800"
               Height="170"
@@ -222,6 +223,7 @@
                     FontWeight="Bold" />
 
                   <TextBox 
+                    Text="{Binding EanCode}"
                     Height="25"
                     Width="110" />
                 </StackPanel>
@@ -237,6 +239,7 @@
                     FontWeight="Bold" />
 
                   <TextBox 
+                    Text="{Binding IdCategory}"
                     Height="25"
                     Width="110" />
                 </StackPanel>
@@ -252,6 +255,7 @@
                     FontWeight="Bold" />
 
                   <TextBox 
+                    Text="{Binding Libelle}"
                     Height="25"
                     Width="110" />
                 </StackPanel>
@@ -278,6 +282,7 @@
             Grid.Column="1"
             Width="100"
             Height="25"
+            Command="{Binding ValidateCommand}"
             HorizontalAlignment="Right"
             Content="Valider" />
         </StackPanel>

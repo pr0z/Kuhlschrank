@@ -1,4 +1,5 @@
-﻿using Kuhlschrank.ChildWindows.ViewModels;
+﻿using DataContracts;
+using Kuhlschrank.ChildWindows.ViewModels;
 using Kuhlschrank.Context;
 using System;
 using System.Collections.Generic;
@@ -23,11 +24,16 @@ namespace Kuhlschrank.ChildWindows.Views
     {
         private CWUnrecognizedProductViewModel _viewModel;
 
-        public CWUnrecognizedProduct(ApplicationContext context, string fileName)
+        public CWUnrecognizedProduct(ApplicationContext context, string fileName, string ean13)
         {
             InitializeComponent();
-            _viewModel = new CWUnrecognizedProductViewModel(context, fileName, this);
+            _viewModel = new CWUnrecognizedProductViewModel(context, fileName, this, ean13);
             this.DataContext = _viewModel;
+        }
+
+        public Product GetProduct()
+        {
+            return _viewModel.GetProduct();
         }
     }
 }

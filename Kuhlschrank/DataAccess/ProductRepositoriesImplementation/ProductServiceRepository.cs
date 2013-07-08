@@ -34,5 +34,10 @@ namespace DataAccess.ProductRepositoriesImplementation
         {
             MyWebServices.ProductService.Delete(entity);
         }
+
+        public DataContracts.Product GetByEan13(string ean13)
+        {
+            return MyWebServices.ProductService.GetByEan13(ean13);
+        }
     }
 }

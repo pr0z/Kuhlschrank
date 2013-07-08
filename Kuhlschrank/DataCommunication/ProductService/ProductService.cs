@@ -10,7 +10,7 @@ namespace DataCommunication.ProductService
 {
     public class ProductService : IProductService
     {
-        IProductRepository _productRepo = new ProductListRepository();
+        IProductRepository _productRepo = new ProductSqlServerRepository();
 
         public List<DataContracts.Product> GetAll()
         {
@@ -39,6 +39,10 @@ namespace DataCommunication.ProductService
             _productRepo.Delete(entity);
         }
 
+        public DataContracts.Product GetByEan13(string ean13)
+        {
+            return _productRepo.GetByEan13(ean13);
+        }
         #endregion
     }
 }

@@ -58,5 +58,10 @@ namespace DataAccess.ProductRepositoriesImplementation
         {
             _source.RemoveAll(o => o.ID == entity.ID);
         }
+
+        public Product GetByEan13(string ean13)
+        {
+            return _source.Where(o => o.Code == ean13).FirstOrDefault();
+        }
     }
 }

@@ -45,6 +45,7 @@
     <Compile Include="Entity.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recette.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserProducts.cs" />
   </ItemGroup>

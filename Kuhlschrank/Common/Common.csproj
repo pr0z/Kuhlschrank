@@ -37,8 +37,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows" />
-    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>C:\Users\Ben-j\Dropbox\Projets 4AL\PROJET ANNUEL\dll\System.Windows.Interactivity.dll</HintPath>
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>..\..\..\..\..\Dropbox\Projets 4AL\PROJET ANNUEL\dll\System.Windows.Interactivity.dll</HintPath>
     </Reference>
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -64,6 +64,7 @@
     <Compile Include="Repositories\DeviceRepository\IDeviceRepository.cs" />
     <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Repositories\ProductRepository\IProductRepository.cs" />
+    <Compile Include="Repositories\RecetteRepository\IRecetteRepository.cs" />
     <Compile Include="Repositories\UserProductsRepository\IUserProductsRepository.cs" />
     <Compile Include="Repositories\UserRepository\IUserRepository.cs" />
     <Compile Include="Types\Pair.cs" />

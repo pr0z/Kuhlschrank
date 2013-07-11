@@ -101,7 +101,6 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\DataSources\DataContracts.Category.datasource" />
     <None Include="Properties\DataSources\DataContracts.Device.datasource" />
     <None Include="Properties\DataSources\DataContracts.Product.datasource" />

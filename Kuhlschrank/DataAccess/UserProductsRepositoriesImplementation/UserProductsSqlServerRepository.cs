@@ -28,15 +28,7 @@ namespace DataAccess.UserProductsRepositoriesImplementation
 
         public DataContracts.UserProducts GetById(int id)
         {
-            string query = string.Format("SELECT * FROM USERPRODUCTS WHERE id='{0}';", id);
-            using (SqlCommand cmd = AccessBD.Connection.CreateCommand())
-            {
-                cmd.CommandText = query;
-                using (IDataReader reader = cmd.ExecuteReader())
-                {
-                    return MapUSERPRODUCTS(reader).FirstOrDefault();
-                }
-            }
+            throw new Exception("Un objet de type UserProduct n'a pas d'ID");
         }
 
         public List<DataContracts.UserProducts> GetAll()

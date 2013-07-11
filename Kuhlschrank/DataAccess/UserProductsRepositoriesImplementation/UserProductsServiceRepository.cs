@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess.WebServices;
 
 namespace DataAccess.UserProductsRepositoriesImplementation
 {
@@ -11,32 +12,32 @@ namespace DataAccess.UserProductsRepositoriesImplementation
     {
         public List<DataContracts.UserProducts> GetByUserId(int userId)
         {
-            throw new NotImplementedException();
+            return MyWebServices.UserProductsService.GetByUserId(userId);
         }
 
         public DataContracts.UserProducts GetById(int id)
         {
-            throw new NotImplementedException();
+            throw new Exception("Un objet de type UserProduct n'a pas d'ID");
         }
 
         public List<DataContracts.UserProducts> GetAll()
         {
-            throw new NotImplementedException();
+            return MyWebServices.UserProductsService.GetAll();
         }
 
         public void Insert(DataContracts.UserProducts entity)
         {
-            throw new NotImplementedException();
+            MyWebServices.UserProductsService.Insert(entity);
         }
 
         public void Update(DataContracts.UserProducts entity)
         {
-            throw new NotImplementedException();
+            MyWebServices.UserProductsService.Update(entity);
         }
 
         public void Delete(DataContracts.UserProducts entity)
         {
-            throw new NotImplementedException();
+            MyWebServices.UserProductsService.Delete(entity);
         }
     }
 }

@@ -61,6 +61,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>FDE0B8AB688D64BE13017D7A2EAFC44492C62D38</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>D036E85AD13E1C85702F07ADB0A8F3017AC54D2B</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>Kuhlschrank_TemporaryKey.pfx</ManifestKeyFile>
@@ -93,6 +94,13 @@
     </Reference>
     <Reference Include="ReuxablesLegacy">
       <HintPath>..\..\..\..\..\Dropbox\Projets 4AL\PROJET ANNUEL\dll\ReuxablesLegacy.dll</HintPath>
+      <HintPath>C:\Users\Ben-j\Dropbox\Projets 4AL\PROJET ANNUEL\dll\Microsoft.Practices.Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>C:\Users\Ben-j\Dropbox\Projets 4AL\PROJET ANNUEL\dll\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="ReuxablesLegacy">
+      <HintPath>C:\Users\Ben-j\Dropbox\Projets 4AL\PROJET ANNUEL\dll\ReuxablesLegacy.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -101,6 +109,7 @@
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\..\Dropbox\Projets 4AL\PROJET ANNUEL\dll\System.Windows.Interactivity.dll</HintPath>
+      <HintPath>C:\Users\Ben-j\Dropbox\Projets 4AL\PROJET ANNUEL\dll\System.Windows.Interactivity.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -251,12 +260,12 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 et x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

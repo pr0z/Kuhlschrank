@@ -62,7 +62,10 @@ namespace Kuhlschrank.Controls
                     }
                     break;
                 case TileIdentity.Settings:
-                    System.Windows.MessageBox.Show("settings");
+                    {
+                        AccountManagementView account = new AccountManagementView(this.Context);
+                        this.Context.HostWindow.SetView(account);
+                    }
                     break;
                 default:
                     break;

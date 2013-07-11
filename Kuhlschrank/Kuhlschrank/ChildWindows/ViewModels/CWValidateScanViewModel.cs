@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.Practices.Prism.Commands;
 using System.ComponentModel;
 using DataContracts;
+using System.Windows;
 
 namespace Kuhlschrank.ChildWindows.ViewModels
 {
@@ -23,6 +24,20 @@ namespace Kuhlschrank.ChildWindows.ViewModels
                 {
                     _context = value;
                     NotifyPropertyChanged("Context");
+                }
+            }
+        }
+
+        private Window _view;
+        public Window View
+        {
+            get { return _view; }
+            set
+            {
+                if (_view != value)
+                {
+                    _view = value;
+                    NotifyPropertyChanged("View");
                 }
             }
         }
@@ -59,10 +74,12 @@ namespace Kuhlschrank.ChildWindows.ViewModels
         #endregion
 
 		#region CTOR
-        public CWValidateScanViewModel(ApplicationContext context)
+        public CWValidateScanViewModel(ApplicationContext context, Window view)
         {
-            this._validateCommand = new DelegateCommand(ValidateAction, canValidate);
+            this.ValidateCommand = new DelegateCommand(ValidateAction, canValidate);
+            this.CancelCommand = new DelegateCommand(CancelAction, canCancel);
 			this.Context = context;
+            this.View = view;
         }
         #endregion
 
@@ -74,7 +91,17 @@ namespace Kuhlschrank.ChildWindows.ViewModels
 
         private void ValidateAction()
         {
-            
+            this.View.DialogResult = true;
+        }
+
+        private bool canCancel()
+        {
+            return true;
+        }
+
+        private void CancelAction()
+        {
+            this.View.DialogResult = false;
         }
 		#endregion
 

@@ -1,0 +1,287 @@
+﻿<UserControl x:Class="Kuhlschrank.Views.AccountManagementView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:conv="clr-namespace:Common.Converters;assembly=Common"
+             Background="Transparent"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+  <UserControl.Resources>
+
+    <conv:BoolToVisibilityConverter
+      x:Key="BoolToVisibilityConverter" />
+
+    <BitmapImage
+          x:Key="SmartPhone"
+          UriSource="/Common;component/Images/smartphone-icon.png" />
+
+    <Style TargetType="TextBlock" x:Key="TextBlockStyle">
+      <Setter Value="15" Property="FontSize" />
+      <Setter Value="Bold" Property="FontWeight" />
+      <Setter Value="0,15,0,0" Property="Margin" />
+      <Setter Value="190" Property="Width" />
+    </Style>
+
+    <Style TargetType="TextBox" x:Key="TextBoxStyle">
+      <Setter Value="15" Property="FontSize" />
+      <Setter Value="Bold" Property="FontWeight" />
+      <Setter Value="0,15,0,0" Property="Margin" />
+      <Setter Value="600" Property="Width" />
+      <Setter Value="30" Property="Height" />
+    </Style>
+
+    <DataTemplate x:Key="UserDataTemplate">
+      <Border
+        Margin="5,5,5,5"
+        Height="170"
+        Width="170"
+        CornerRadius="6"
+        BorderBrush="Black"
+        BorderThickness="2">
+        <StackPanel
+          Height="170"
+          Width="170"
+          Orientation="Vertical">
+          <StackPanel.Background>
+            <SolidColorBrush Color="Black" Opacity="0.4" />
+          </StackPanel.Background>
+          <Image
+            Width="100"
+            Height="100"
+            x:Name="ProductImage"
+            Source="{StaticResource SmartPhone}"
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Center" />
+          <TextBlock 
+            Margin="0,10,0,0"
+            FontSize="18"
+            Width="130"
+            Height="50"
+            FontWeight="Bold"
+            TextWrapping="Wrap"
+            TextAlignment="Center"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Center"
+            Text="{Binding Libelle}" />
+        </StackPanel>
+      </Border>
+    </DataTemplate>
+
+  </UserControl.Resources>
+
+  <Grid Height="800">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="17*"/>
+      <ColumnDefinition Width="80*"/>
+    </Grid.ColumnDefinitions>
+
+    <StackPanel
+      Margin="20,0,0,0"
+      Height="800"
+      Grid.Column="0">
+      <StackPanel.Background>
+        <SolidColorBrush Color="Black" Opacity="0.4" />
+      </StackPanel.Background>
+      <ListView
+        BorderBrush="Transparent"
+        Background="Transparent">
+        <ListViewItem>
+          <StackPanel
+             VerticalAlignment="Center"
+             Orientation="Vertical"
+             Height="50">
+            <TextBlock
+              Grid.Column="0"
+              VerticalAlignment="Center"
+              Text="Votre compte"
+              FontSize="18"
+              FontWeight="Bold"/>
+          </StackPanel>
+        </ListViewItem>
+      </ListView>
+    </StackPanel>
+
+    <StackPanel
+      Grid.Column="1"
+      Height="500"
+      Width="900"
+      Margin="80,-60,80,80"
+      Orientation="Horizontal">
+      <StackPanel.Background>
+        <SolidColorBrush Color="Black" Opacity="0.4" />
+      </StackPanel.Background>
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel
+          Margin="180,20,0,0"
+          Width="500"
+          Grid.Row="0">
+          <StackPanel>
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="25*" />
+              </Grid.RowDefinitions>
+              
+              <StackPanel
+                Grid.Row="0" >
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*" />
+                    <ColumnDefinition Width="60*" />
+                    <ColumnDefinition Width="10*" />
+                  </Grid.ColumnDefinitions>
+                  
+                  <TextBlock
+                    Style="{StaticResource TextBlockStyle}"
+                    Grid.Column="0"
+                    Text="Votre prénom :"
+                    HorizontalAlignment="Left" />
+
+                  <TextBox
+                    Style="{StaticResource TextBoxStyle}"
+                    Grid.Column="1"
+                    Text="{Binding UserFirstName}"
+                    IsEnabled="False" />
+                  
+                  <Button
+                    Grid.Column="2"
+                    Width="16"
+                    Height="16" />
+                </Grid>
+              </StackPanel>
+
+              <StackPanel
+                Grid.Row="1" >
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*" />
+                    <ColumnDefinition Width="60*" />
+                    <ColumnDefinition Width="10*" />
+                  </Grid.ColumnDefinitions>
+
+                  <TextBlock
+                    Style="{StaticResource TextBlockStyle}"
+                    Grid.Column="0"
+                    Text="Votre nom :"
+                    HorizontalAlignment="Left" />
+
+                  <TextBox
+                    Style="{StaticResource TextBoxStyle}"
+                    Grid.Column="1"
+                    Text="{Binding UserName}"
+                    IsEnabled="False" />
+
+                  <Button
+                    Grid.Column="2"
+                    Width="16"
+                    Height="16" />
+                </Grid>
+              </StackPanel>
+
+              <StackPanel
+                Grid.Row="2" >
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*" />
+                    <ColumnDefinition Width="60*" />
+                    <ColumnDefinition Width="10*" />
+                  </Grid.ColumnDefinitions>
+
+                  <TextBlock
+                    Style="{StaticResource TextBlockStyle}"
+                    Grid.Column="0"
+                    Text="Votre mail :"
+                    HorizontalAlignment="Left" />
+
+                  <TextBox
+                    Style="{StaticResource TextBoxStyle}"
+                    Grid.Column="1"
+                    Text="{Binding UserMail}"
+                    IsEnabled="False" />
+
+                  <Button
+                    Grid.Column="2"
+                    Width="16"
+                    Height="16" />
+                </Grid>
+              </StackPanel>
+
+              <StackPanel          
+                Grid.Row="3" >
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*" />
+                    <ColumnDefinition Width="60*" />
+                    <ColumnDefinition Width="10*" />
+                  </Grid.ColumnDefinitions>
+
+                  <TextBlock
+                    Style="{StaticResource TextBlockStyle}"
+                    Grid.Column="0"
+                    Text="Votre mot passe :"
+                    HorizontalAlignment="Left" />
+
+                  <TextBox
+                    Style="{StaticResource TextBoxStyle}"
+                    Grid.Column="1"
+                    Text="{Binding UserPassword}"
+                    IsEnabled="False" />
+
+                  <Button
+                    Grid.Column="2"
+                    Width="16"
+                    Height="16" />
+                </Grid>
+              </StackPanel>
+              
+            </Grid>
+          </StackPanel>
+        </StackPanel>
+
+
+        <StackPanel
+          Margin="0,20,0,0"
+          Width="500"
+          Grid.Row="0">
+          <StackPanel>
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="95*" />
+              </Grid.RowDefinitions>
+
+              <TextBlock
+                Grid.Row="0"
+                Text="Vos périphériques :"
+                FontWeight="Bold"
+                FontSize="16" />
+
+              <StackPanel
+                Grid.Row="1" 
+                Orientation="Horizontal">
+                <ItemsControl ItemTemplate="{StaticResource UserDataTemplate}" ItemsSource="{Binding ListDevices}" VerticalAlignment="Top" Height="500">
+                  <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                      <VirtualizingStackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                  </ItemsControl.ItemsPanel>
+                </ItemsControl>
+              </StackPanel>
+
+            </Grid>
+          </StackPanel>
+        </StackPanel>
+      </Grid>
+    </StackPanel>
+  </Grid>
+
+</UserControl>

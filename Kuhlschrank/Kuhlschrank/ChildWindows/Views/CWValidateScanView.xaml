@@ -68,6 +68,7 @@
 
     <Button
       Style="{StaticResource TransparentButton}"
+      Command="{Binding CancelCommand}"
       Height="200"
       Width="200"
       Grid.Row="1"
@@ -79,6 +80,7 @@
 
     <Button
       Style="{StaticResource TransparentButton}"
+      Command="{Binding ValidateCommand}"
       Height="200"
       Width="200"
       Cursor="Hand"

@@ -1,5 +1,6 @@
-﻿using Kuhlschrank.ChildWindows.ViewModels;
+﻿using Common;
 using Kuhlschrank.Context;
+using Kuhlschrank.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,21 +13,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kuhlschrank.ChildWindows.Views
+namespace Kuhlschrank.Views
 {
     /// <summary>
-    /// Interaction logic for CWValidateScanView.xaml
+    /// Interaction logic for AccountManagement.xaml
     /// </summary>
-    public partial class CWValidateScanView : Window
+    public partial class AccountManagementView : UserControl
     {
-        private CWValidateScanViewModel _viewModel { get; set; }
+        private AccountManagementViewModel _viewModel { get; set; }
 
-        public CWValidateScanView(ApplicationContext context)
+        public AccountManagementView(ApplicationContext context)
         {
             InitializeComponent();
-            _viewModel = new CWValidateScanViewModel(context, this);
+            _viewModel = new AccountManagementViewModel(context);
             this.DataContext = _viewModel;
         }
     }

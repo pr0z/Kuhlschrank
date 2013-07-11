@@ -41,7 +41,11 @@ namespace DataAccess.UserProductsRepositoriesImplementation
         //}
         public List<DataContracts.UserProducts> GetByUserId(int userId)
         {
+<<<<<<< HEAD
             throw new NotImplementedException();
+=======
+            return MyWebServices.UserProductService.GetByUserId(userId);
+>>>>>>> ptite modif
         }
 
         public DataContracts.UserProducts GetById(int id)
@@ -51,22 +55,38 @@ namespace DataAccess.UserProductsRepositoriesImplementation
 
         public List<DataContracts.UserProducts> GetAll()
         {
+<<<<<<< HEAD
             throw new NotImplementedException();
+=======
+            return MyWebServices.UserProductService.GetAll();
+>>>>>>> ptite modif
         }
 
         public void Insert(DataContracts.UserProducts entity)
         {
+<<<<<<< HEAD
             throw new NotImplementedException();
+=======
+            MyWebServices.UserProductService.Insert(entity);
+>>>>>>> ptite modif
         }
 
         public void Update(DataContracts.UserProducts entity)
         {
+<<<<<<< HEAD
             throw new NotImplementedException();
+=======
+            MyWebServices.UserProductService.Update(entity);
+>>>>>>> ptite modif
         }
 
         public void Delete(DataContracts.UserProducts entity)
         {
+<<<<<<< HEAD
             throw new NotImplementedException();
+=======
+            MyWebServices.UserProductService.Delete(entity);
+>>>>>>> ptite modif
         }
     }
 }

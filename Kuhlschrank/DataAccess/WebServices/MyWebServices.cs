@@ -77,5 +77,37 @@ namespace DataAccess.WebServices
             }
         }
         #endregion
+
+        #region UserProductService
+        private static UserProductService.UserProductServiceClient _upsc;
+        public static UserProductService.UserProductServiceClient UserProductService
+        {
+            get
+            {
+                if (_upsc == null || !IsInGoodState(_upsc.State))
+                {
+                    _upsc = new UserProductService.UserProductServiceClient();
+                    _upsc.Open();
+                }
+                return _upsc;
+            }
+        }
+        #endregion
+
+        #region RecetteService
+        private static RecetteService.RecetteServiceClient _rsc;
+        public static RecetteService.RecetteServiceClient RecetteService
+        {
+            get
+            {
+                if (_rsc == null || !IsInGoodState(_rsc.State))
+                {
+                    _rsc = new RecetteService.RecetteServiceClient();
+                    _rsc.Open();
+                }
+                return _rsc;
+            }
+        }
+        #endregion
     }
 }

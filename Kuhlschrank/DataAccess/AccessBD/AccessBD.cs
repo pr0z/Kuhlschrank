@@ -8,10 +8,16 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
+    /// <summary>
+    /// Classe statique qui gère la connexion à la base de données
+    /// </summary>
     public static class AccessBD
     {
         private static SqlConnection _connection;
 
+        /// <summary>
+        /// Retourne la connexion courante
+        /// </summary>
         public static SqlConnection Connection
         {
             get

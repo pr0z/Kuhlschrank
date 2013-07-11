@@ -9,6 +9,9 @@ using System.Windows.Media;
 
 namespace Common.Behavior
 {
+    /// <summary>
+    /// Classe qui décrit le comportement des tuiles composant le menu
+    /// </summary>
     public class ItemsControlDragDropBehavior : Behavior<ItemsControl>
     {
         private bool _isMouseDown;
@@ -215,7 +218,6 @@ namespace Common.Behavior
             return child;
         }
 
-        /// still needs some work
         private static bool IsPointAfterAllItems(ItemsControl itemsControl, Point point)
         {
             bool isAfter = false;

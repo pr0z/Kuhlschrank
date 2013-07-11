@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Common.Enums
 {
+    /// <summary>
+    /// Enumération recensant les actions disponibles dans le menu
+    /// </summary>
     public enum TileIdentity
     {
         ScanContent,

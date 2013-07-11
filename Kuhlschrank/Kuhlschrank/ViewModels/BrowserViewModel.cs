@@ -17,6 +17,7 @@ using System.Windows;
 using Common.Types;
 using Common.Repositories.ProductRepository;
 using DataAccess.ProductRepositoriesImplementation;
+using DataAccess.UserProductsRepositoriesImplementation;
 
 namespace Kuhlschrank.ViewModels
 {
@@ -64,6 +65,20 @@ namespace Kuhlschrank.ViewModels
                         _copy = value;
                         NotifyPropertyChanged("Copy");
                     }
+                }
+            }
+        }
+
+        private ObservableCollection<UserProducts> _allUserProducts;
+        public ObservableCollection<UserProducts> AllUserProducts
+        {
+            get { return _allUserProducts; }
+            set
+            {
+                if (_allUserProducts != value)
+                {
+                    _allUserProducts = value;
+                    NotifyPropertyChanged("AllUserProducts");
                 }
             }
         }
@@ -120,6 +135,20 @@ namespace Kuhlschrank.ViewModels
                 {
                     _listVegetables = value;
                     NotifyPropertyChanged("ListVegetables");
+                }
+            }
+        }
+
+        private ObservableCollection<Product> _listMeats;
+        public ObservableCollection<Product> ListMeats
+        {
+            get { return _listMeats; }
+            set
+            {
+                if (_listMeats != value)
+                {
+                    _listMeats = value;
+                    NotifyPropertyChanged("ListMeats");
                 }
             }
         }
@@ -183,6 +212,20 @@ namespace Kuhlschrank.ViewModels
             }
         }
 
+        private bool _meatEnabled;
+        public bool MeatEnabled
+        {
+            get { return _meatEnabled; }
+            set
+            {
+                if (_meatEnabled != value)
+                {
+                    _meatEnabled = value;
+                    NotifyPropertyChanged("MeatEnabled");
+                }
+            }
+        }
+
         private ICategoryRepository _categRepo;
         public ICategoryRepository CategRepo
         {
@@ -200,6 +243,15 @@ namespace Kuhlschrank.ViewModels
                 return _productRepo ?? (_productRepo = new ProductSqlServerRepository());
             }
         }
+
+        private IUserProductsRepository _userProductsRepo;
+        public IUserProductsRepository UserProductsRepo
+        {
+            get
+            {
+                return _userProductsRepo ?? (_userProductsRepo = new UserProductsSqlServerRepository());
+            }
+        }
         #endregion
 
         #region CTOR
@@ -207,13 +259,25 @@ namespace Kuhlschrank.ViewModels
         {
             this.Context = context;
             this.ListCategory = CategRepo.GetAll().Select(o => new Pair<bool, Category>(false, o)).ToList().ToObservableCollection();
-            this.AllProducts = ProductRepo.GetAll().ToObservableCollection();
-            this.ListDrinks = this.AllProducts.Where(o => o.IdCategory == 1).ToList().ToObservableCollection();
-            this.ListMilkProducts = this.AllProducts.Where(o => o.IdCategory == 2).ToList().ToObservableCollection();
-            this.ListVegetables = this.AllProducts.Where(o => o.IdCategory == 3).ToList().ToObservableCollection();
+            this.AllUserProducts = UserProductsRepo.GetByUserId(context.ApplicationUser.ID).ToObservableCollection();
+            this.MapProducts();
             this.Copy = new ObservableCollection<Pair<bool, Category>>();
 
             this.SelectedItem = this.ListCategory.First();
+        }
+        #endregion
+
+        #region PRIVATE METHODS
+        private void MapProducts()
+        {
+            this.AllProducts = new ObservableCollection<Product>();
+            foreach (var product in AllUserProducts)
+                this.AllProducts.Add(ProductRepo.GetById(product.IdProduct));
+
+            this.ListDrinks = this.AllProducts.Where(o => o.IdCategory == 1).ToList().ToObservableCollection();
+            this.ListMilkProducts = this.AllProducts.Where(o => o.IdCategory == 2).ToList().ToObservableCollection();
+            this.ListVegetables = this.AllProducts.Where(o => o.IdCategory == 3).ToList().ToObservableCollection();
+            this.ListMeats = this.AllProducts.Where(o => o.IdCategory == 4).ToList().ToObservableCollection();
         }
         #endregion
 
@@ -258,6 +322,11 @@ namespace Kuhlschrank.ViewModels
                     VegetableEnabled = true;
                 else
                     VegetableEnabled = false;
+
+                if (SelectedItem.Second.ID == 4)
+                    MeatEnabled = true;
+                else
+                    MeatEnabled = false;
             }
         }
         #endregion

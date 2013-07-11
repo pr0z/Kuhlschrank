@@ -63,12 +63,8 @@
     <Compile Include="Repositories\DeviceRepository\IDeviceRepository.cs" />
     <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Repositories\ProductRepository\IProductRepository.cs" />
+    <Compile Include="Repositories\UserProductsRepository\IUserProductsRepository.cs" />
     <Compile Include="Repositories\UserRepository\IUserRepository.cs" />
-    <Compile Include="TextTemplates\ViewModelTemplate.cs">
-      <DependentUpon>ViewModelTemplate.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Types\Pair.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -103,11 +99,6 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\bottle-icon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -126,26 +117,22 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="TextTemplates\ViewModelTemplate.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ViewModelTemplate.cs</LastGenOutput>
-    </None>
-    <None Include="TextTemplates\ViewTemplate.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ViewTemplate.xaml</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <CodeAnalysisDictionary Include="TextTemplates\ViewTemplate.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <DependentUpon>ViewTemplate.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Designer</SubType>
-      <DesignTime>True</DesignTime>
-    </CodeAnalysisDictionary>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\vegetables-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\meats-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\drinks-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

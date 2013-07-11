@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 namespace Common.Repositories.ProductRepository
 {
     /// <summary>
-    /// Contrat du Repository Prodcut
+    /// Contrat du Repository UserProducts
     /// </summary>
-    public interface IProductRepository : IRepository<Product>
+    public interface IUserProductsRepository : IRepository<UserProducts>
     {
-        DataContracts.Product GetByEan13(string ean13);
+        List<DataContracts.UserProducts> GetByUserId(int userId);
     }
 }

@@ -72,6 +72,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="UserProductsRepositoriesImplementation\UserProductsListRepository.cs" />
+    <Compile Include="UserProductsRepositoriesImplementation\UserProductsServiceRepository.cs" />
+    <Compile Include="UserProductsRepositoriesImplementation\UserProductsSqlServerRepository.cs" />
     <Compile Include="UserRepositoriesImplementation\UserListRepository.cs" />
     <Compile Include="UserRepositoriesImplementation\UserServiceRepository.cs" />
     <Compile Include="UserRepositoriesImplementation\UserSqlServerRepository.cs" />

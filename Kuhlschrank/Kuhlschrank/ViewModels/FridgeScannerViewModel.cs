@@ -16,6 +16,8 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
+using DataAccess.UserProductsRepositoriesImplementation;
+using Common.Types;
 
 namespace Kuhlschrank.ViewModels
 {
@@ -86,6 +88,14 @@ namespace Kuhlschrank.ViewModels
                 return _productRepo ?? (_productRepo = new ProductSqlServerRepository());
             }
         }
+        private IUserProductsRepository _userProductsRepo;
+        public IUserProductsRepository UserProductsRepo
+        {
+            get
+            {
+                return _userProductsRepo ?? (_userProductsRepo = new UserProductsSqlServerRepository());
+            }
+        }
         #endregion
 
         #region COMMANDS
@@ -140,7 +150,22 @@ namespace Kuhlschrank.ViewModels
         private void StartAction()
         {
             this.LoadVisible = true;
-            this.AnalyzeContent();
+            BackgroundWorker worker = new BackgroundWorker();
+            worker.DoWork += worker_DoWork;
+            worker.RunWorkerCompleted += worker_RunWorkerCompleted;
+            worker.RunWorkerAsync();
+        }
+
+        void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            BarCodeAnalyser eanAnalyser = new BarCodeAnalyser();
+            this.RecognizedEan = eanAnalyser.Analyse();
+            ProcessEans();
+        }
+
+        void worker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            AnalyzeContent();
         }
 
         private bool canStop()
@@ -156,6 +181,32 @@ namespace Kuhlschrank.ViewModels
         #endregion
 
         #region PRIVATE METHODS
+        private void SaveProducts()
+        {
+            foreach (var prod in this.HandleDoublons())
+            {
+                UserProducts entity = new UserProducts();
+                entity.IdProduct = prod.First.ID;
+                entity.IdUser = this.Context.ApplicationUser.ID;
+                entity.Quantity = prod.Second;
+
+                UserProductsRepo.Insert(entity);
+            }
+        }
+
+        private List<Pair<Product, int>> HandleDoublons()
+        {
+            List<Pair<Product, int>> result = new List<Pair<Product, int>>();
+
+            foreach (Product prod in this.RecognizedProducts)
+                result.Add(new Pair<Product, int>(prod, 0));
+
+            foreach (Product prod in this.RecognizedProducts)
+                result.Where(o => o.First.ID == prod.ID).FirstOrDefault().Second++;
+
+            return result;
+        }
+
         private void ProcessEans()
         {
             foreach (KeyValuePair<string, string> product in this.RecognizedEan)
@@ -174,6 +225,7 @@ namespace Kuhlschrank.ViewModels
                 this.RecognizedProducts.Add(entity);
             }
 
+            this.SaveProducts();
             this.LoadVisible = false;
         }
 
@@ -181,9 +233,6 @@ namespace Kuhlschrank.ViewModels
         {
             ShapeDetectionEngine shapeEngine = new ShapeDetectionEngine();
             shapeEngine.ProcessImage();
-            BarCodeAnalyser eanAnalyser = new BarCodeAnalyser();
-            this.RecognizedEan = eanAnalyser.Analyse();
-            ProcessEans();
         }
         #endregion
 
@@ -200,9 +249,8 @@ namespace Kuhlschrank.ViewModels
             if (this.StopCommand != null)
                 this.StopCommand.RaiseCanExecuteChanged();
 
-            //if (propertyName == "RecognizedEan")
-            //    if (this.RecognizedEan != null)
-            //        ProcessEans();
+            if (propertyName == "RecognizedEan")
+                this.ProcessEans();
         }
         #endregion
     }

@@ -13,6 +13,10 @@ using System.Threading.Tasks;
 
 namespace Business.ShapeDetectionEngine
 {
+    /// <summary>
+    /// Moteur de reconnaissance de formes
+    /// Basée sur le framework AForge.Net
+    /// </summary>
     public class ShapeDetectionEngine
     {
         public string FolderName { get; set; }
@@ -21,6 +25,11 @@ namespace Business.ShapeDetectionEngine
         SimpleShapeChecker ShapeChecker { get; set; }
         BlobCounter ShapeAnalyser { get; set; }
 
+        /// <summary>
+        /// Constructeur par défaut 
+        /// Initialise les fichiers à analyser et les paramètres d'analyse
+        /// Crée le répertoire ou enregistrer les résultats
+        /// </summary>
         public ShapeDetectionEngine()
         {
             Picture = (Bitmap)Bitmap.FromFile(@"C:\Users\RLEI\Pictures\Products\prod.jpg");
@@ -36,7 +45,11 @@ namespace Business.ShapeDetectionEngine
             Directory.CreateDirectory(Path.Combine(Path.GetTempPath(), FolderName));
         }
 
-        public bool ProcessImage()
+        /// <summary>
+        /// Méthode qui analyse les images envoyées par le client
+        /// Repère les formes présentes, les découpe et les enregistre en ficiers distincts
+        /// </summary>
+        public void ProcessImage()
         {
             BitmapData bitData = Picture.LockBits(new Rectangle(0, 0, Picture.Width, Picture.Height), ImageLockMode.ReadWrite, Picture.PixelFormat);
 
@@ -73,9 +86,6 @@ namespace Business.ShapeDetectionEngine
 
                 target.Save(string.Format(@"{0}\{1}\crop{2}.jpg", Path.GetTempPath(), FolderName, i));
             }
-            
-
-            return false;
         }
     }
 }

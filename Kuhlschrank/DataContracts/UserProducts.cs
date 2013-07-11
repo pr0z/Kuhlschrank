@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace DataContracts
 {
     [DataContract]
-    public class UseProducts : Entity
+    public class UserProducts : Entity
     {
         [DataMember]
         public int IdProduct { get; set; }

@@ -8,6 +8,9 @@ using System.Windows.Controls;
 
 namespace Common.Helpers
 {
+    /// <summary>
+    /// Classe qui gère le comportement du controle PasswordBox
+    /// </summary>
     public static class PasswordHelper
     {
         public static readonly DependencyProperty PasswordProperty =

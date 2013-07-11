@@ -10,8 +10,19 @@ using System.Windows.Media;
 
 namespace Common.Converters
 {
+    /// <summary>
+    /// Converter qui prend une valeur booléenne en paramètre et retourne un visiblité
+    /// </summary>
     public class BoolToVisibilityConverter : IValueConverter
     {
+        /// <summary>
+        /// Méthode de conversion
+        /// </summary>
+        /// <param name="value">valeur booleene</param>
+        /// <param name="targetType">controle visé</param>
+        /// <param name="parameter">paramètre à prendre en compte</param>
+        /// <param name="culture">culture du poste courant</param>
+        /// <returns></returns>
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
             if ((bool)value)

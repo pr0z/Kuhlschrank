@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace Common.Repositories.DeviceRepository
 {
+    /// <summary>
+    /// Contrat du Repository Device
+    /// </summary>
     public interface IDeviceRepository : IRepository<Device>
     {
     }

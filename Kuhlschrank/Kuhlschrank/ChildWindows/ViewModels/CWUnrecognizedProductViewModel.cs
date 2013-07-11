@@ -230,7 +230,6 @@ namespace Kuhlschrank.ChildWindows.ViewModels
 
         private void CloseAction()
         {
-            this.View.Close();
             this.View.DialogResult = false;
         }
 

@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Common.Repositories
 {
+    /// <summary>
+    /// Contrat dont tout les Repositories héritent
+    /// </summary>
     public interface IRepository<T>
     {
         T GetById(int id);

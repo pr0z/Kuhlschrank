@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Common.Enums
 {
+    /// <summary>
+    /// Différents types de tuile utilisables
+    /// </summary>
     public enum TileType
     {
         Browser,

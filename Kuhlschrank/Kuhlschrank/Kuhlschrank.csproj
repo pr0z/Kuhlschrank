@@ -118,8 +118,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ChildWindows\ViewModels\CWUnrecognizedProductViewModel.cs" />
+    <Compile Include="ChildWindows\ViewModels\CWValidateScanViewModel.cs" />
     <Compile Include="ChildWindows\Views\CWUnrecognizedProduct.xaml.cs">
       <DependentUpon>CWUnrecognizedProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\Views\CWValidateScanView.xaml.cs">
+      <DependentUpon>CWValidateScanView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Context\ApplicationContext.cs" />
     <Compile Include="Controls\LoadControl\LoadControl.xaml.cs">
@@ -143,6 +147,10 @@
       <DependentUpon>MenuView.xaml</DependentUpon>
     </Compile>
     <Page Include="ChildWindows\Views\CWUnrecognizedProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\Views\CWValidateScanView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

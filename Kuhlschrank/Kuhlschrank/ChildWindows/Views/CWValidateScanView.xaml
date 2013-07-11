@@ -1,0 +1,92 @@
+﻿<Window x:Class="Kuhlschrank.ChildWindows.Views.CWValidateScanView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        BorderBrush="Transparent"
+        Title="CWValidateScanView" Height="300" Width="600">
+  <Window.Resources>
+    <BitmapImage
+          x:Key="Background"
+          UriSource="/Common;component/Images/mainBackground.jpg" />
+
+    <BitmapImage
+          x:Key="Validate"
+          UriSource="/Common;component/Images/valid-big-icon.png" />
+
+    <BitmapImage
+          x:Key="Cancel"
+          UriSource="/Common;component/Images/cancel-big-icon.png" />
+
+    <Style x:Key="TransparentButton" TargetType="{x:Type Button}">
+      <Setter Property="HorizontalContentAlignment" Value="Center"/>
+      <Setter Property="VerticalContentAlignment" Value="Center"/>
+      <Setter Property="Padding" Value="1"/>
+      <Setter Property="Template">
+        <Setter.Value>
+          <ControlTemplate TargetType="{x:Type Button}">
+            <Border x:Name="border" BorderThickness="2" BorderBrush="Transparent">
+              <ContentPresenter></ContentPresenter>
+            </Border>
+            <ControlTemplate.Triggers>
+              <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="BorderBrush" TargetName="border" Value="Transparent"/>
+              </Trigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+
+  </Window.Resources>
+
+
+  <Window.Background>
+    <ImageBrush ImageSource="{StaticResource Background}" Stretch="UniformToFill" />
+  </Window.Background>
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="5*" />
+      <RowDefinition Height="95*" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="50*" />
+      <ColumnDefinition Width="50*" />
+    </Grid.ColumnDefinitions>
+
+    <Grid.Background>
+      <SolidColorBrush Color="Black" Opacity="0.4"/>
+    </Grid.Background>
+
+    <TextBlock
+      Grid.Row="0"
+      Text="Le résultat de ce scan vous convient il ?"
+      FontWeight="Bold"
+      FontSize="14"/>
+
+    <Button
+      Style="{StaticResource TransparentButton}"
+      Height="200"
+      Width="200"
+      Grid.Row="1"
+      Cursor="Hand"
+      Grid.Column="0">
+      <Image 
+          Source="{StaticResource Cancel}" />
+    </Button>
+
+    <Button
+      Style="{StaticResource TransparentButton}"
+      Height="200"
+      Width="200"
+      Cursor="Hand"
+      Grid.Row="1"
+      Grid.Column="1">
+      <Image 
+          Source="{StaticResource Validate}" />
+    </Button>
+
+  </Grid>
+</Window>

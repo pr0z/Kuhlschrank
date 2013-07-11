@@ -225,14 +225,30 @@ namespace Kuhlschrank.ViewModels
                 this.RecognizedProducts.Add(entity);
             }
 
-            this.SaveProducts();
+            //this.SaveProducts();
             this.LoadVisible = false;
+            this.ValidateScan();
         }
 
         private void AnalyzeContent()
         {
             ShapeDetectionEngine shapeEngine = new ShapeDetectionEngine();
             shapeEngine.ProcessImage();
+        }
+
+        private void ValidateScan()
+        {
+            CWValidateScanView cw = new CWValidateScanView(this.Context);
+            if (cw.ShowDialog().HasValue && cw.DialogResult.Value)
+                return;
+            else
+            {
+                BackgroundWorker worker = new BackgroundWorker();
+                worker.DoWork += worker_DoWork;
+                worker.RunWorkerCompleted += worker_RunWorkerCompleted;
+                worker.RunWorkerAsync();
+            }
+
         }
         #endregion
 

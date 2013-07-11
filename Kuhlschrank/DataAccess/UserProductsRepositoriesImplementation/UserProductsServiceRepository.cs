@@ -10,34 +10,63 @@ namespace DataAccess.UserProductsRepositoriesImplementation
 {
     public class UserProductsServiceRepository : IUserProductsRepository
     {
+        //public List<DataContracts.UserProducts> GetByUserId(int userId)
+        //{
+        //    return MyWebServices.UserProductsService.GetByUserId(userId);
+        //}
+
+        //public DataContracts.UserProducts GetById(int id)
+        //{
+        //    throw new Exception("Un objet de type UserProduct n'a pas d'ID");
+        //}
+
+        //public List<DataContracts.UserProducts> GetAll()
+        //{
+        //    return MyWebServices.UserProductsService.GetAll();
+        //}
+
+        //public void Insert(DataContracts.UserProducts entity)
+        //{
+        //    MyWebServices.UserProductsService.Insert(entity);
+        //}
+
+        //public void Update(DataContracts.UserProducts entity)
+        //{
+        //    MyWebServices.UserProductsService.Update(entity);
+        //}
+
+        //public void Delete(DataContracts.UserProducts entity)
+        //{
+        //    MyWebServices.UserProductsService.Delete(entity);
+        //}
         public List<DataContracts.UserProducts> GetByUserId(int userId)
         {
-            return MyWebServices.UserProductsService.GetByUserId(userId);
+            throw new NotImplementedException();
         }
 
         public DataContracts.UserProducts GetById(int id)
         {
-            throw new Exception("Un objet de type UserProduct n'a pas d'ID");
+            throw new NotImplementedException();
         }
 
         public List<DataContracts.UserProducts> GetAll()
         {
-            return MyWebServices.UserProductsService.GetAll();
+            throw new NotImplementedException();
         }
 
         public void Insert(DataContracts.UserProducts entity)
         {
-            MyWebServices.UserProductsService.Insert(entity);
+            throw new NotImplementedException();
         }
 
         public void Update(DataContracts.UserProducts entity)
         {
-            MyWebServices.UserProductsService.Update(entity);
+            throw new NotImplementedException();
         }
 
         public void Delete(DataContracts.UserProducts entity)
         {
-            MyWebServices.UserProductsService.Delete(entity);
+            throw new NotImplementedException();
         }
     }
 }

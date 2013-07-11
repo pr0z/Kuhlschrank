@@ -13,5 +13,6 @@ namespace Common.Repositories.DeviceRepository
     /// </summary>
     public interface IDeviceRepository : IRepository<Device>
     {
+        List<DataContracts.Device> GetByUserId(int userId);
     }
 }

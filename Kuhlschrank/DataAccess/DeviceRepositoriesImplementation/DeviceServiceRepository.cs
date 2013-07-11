@@ -37,6 +37,11 @@ namespace DataAccess.DeviceRepositoriesImplementation
             MyWebServices.DeviceService.Delete(entity);
         }
 
+        public List<DataContracts.Device> GetByUserId(int userId)
+        {
+            return MyWebServices.DeviceService.GetByUserId(userId);
+        }
         #endregion
+
     }
 }

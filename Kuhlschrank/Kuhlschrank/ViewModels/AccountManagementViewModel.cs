@@ -145,7 +145,7 @@ namespace Kuhlschrank.ViewModels
             this.UserFirstName = this.Context.ApplicationUser.Prenom;
             this.UserMail = this.Context.ApplicationUser.Mail;
             this.UserPassword = this.Context.ApplicationUser.Password;
-            //this.ListDevices = DeviceRepo.get
+            this.ListDevices = this.DeviceRepo.GetByUserId(this.Context.ApplicationUser.ID);
         }
         #endregion
 

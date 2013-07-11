@@ -58,5 +58,10 @@ namespace DataAccess.DeviceRepositoriesImplementation
         {
             _source.RemoveAll(o => o.ID == entity.ID);
         }
+
+        public List<Device> GetByUserId(int userId)
+        {
+            return _source.Where(o => o.userId == userId).ToList();
+        }
     }
 }

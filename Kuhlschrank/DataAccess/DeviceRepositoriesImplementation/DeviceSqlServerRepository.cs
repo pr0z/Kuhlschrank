@@ -92,5 +92,19 @@ namespace DataAccess.DeviceRepositoriesImplementation
             }
             return list;
         }
+
+        public List<Device> GetByUserId(int userId)
+        {
+            string query = string.Format("SELECT * FROM DEVICE WHERE userId={0};", userId);
+            using (SqlCommand cmd = AccessBD.Connection.CreateCommand())
+            {
+                cmd.CommandText = query;
+
+                using (IDataReader reader = cmd.ExecuteReader())
+                {
+                    return MapDEVICE(reader);
+                }
+            }
+        }
     }
 }

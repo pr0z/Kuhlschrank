@@ -28,6 +28,11 @@ namespace DataCommunication.DeviceService
             return _repo.GetAll();
         }
 
+        public List<Device> GetByUserId(int userId)
+        {
+            return _repo.GetAll().Where(o => o.userId == userId).ToList();
+        }
+
         public void Register(string type, string uniqueIdentifier, int userId)
         {
             Insert(new Device()

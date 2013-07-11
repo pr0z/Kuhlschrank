@@ -21,6 +21,9 @@ namespace DataCommunication.DeviceService
         new Device GetById(int id);
 
         [OperationContract]
+        new List<Device> GetByUserId(int userId);
+
+        [OperationContract]
         new void Delete(Device entity);
 
         [OperationContract]

@@ -53,6 +53,7 @@
     <Compile Include="Command\ActionCommand.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Converters\TileTypeToColorConverter.cs" />
+    <Compile Include="Converters\ViewToVisibilityConverter.cs" />
     <Compile Include="Enums\TileIdentity.cs" />
     <Compile Include="Enums\TileType.cs" />
     <Compile Include="Extensions\ExtensionMethods.cs" />

@@ -43,7 +43,7 @@
         </Setter.Value>
       </Setter>
     </Style>
-    
+
     <Style x:Key="UserInfoStyle" TargetType="{x:Type TextBlock}">
       <Setter Property="FontWeight" Value="Bold" />
       <Setter Property="FontSize" Value="12" />
@@ -51,6 +51,9 @@
 
     <conv:BoolToVisibilityConverter
       x:Key="BoolToVisibilityConverter" />
+
+    <conv:ViewToVisibilityConverter
+      x:Key="ViewToVisibilityConverter" />
   </Window.Resources>
 
   <Window.Background>
@@ -81,6 +84,7 @@
           <Button x:Name="PreviousButton"
                   VerticalAlignment="Top" 
                   HorizontalAlignment="Left"
+                  Visibility="{Binding PreviousView, Converter={StaticResource ViewToVisibilityConverter}}"
                   Height="50" 
                   Width="50"
                   Style="{StaticResource TransparentButton}"
@@ -92,6 +96,7 @@
 
         <StackPanel
             Grid.Column="1"
+            Visibility="{Binding IsLogged, Converter={StaticResource BoolToVisibilityConverter}}"
             x:Name="UserInfos">
           <Grid 
             HorizontalAlignment="Right"
@@ -102,8 +107,8 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Row="0" VerticalAlignment="Center" Orientation="Vertical" Margin="-30,0,0,0">
-              <TextBlock Style="{StaticResource UserInfoStyle}" x:Name="FirstNameField" />
-              <TextBlock Style="{StaticResource UserInfoStyle}" x:Name="NameField" />
+              <TextBlock Style="{StaticResource UserInfoStyle}" Text="{Binding FirstName}" />
+              <TextBlock Style="{StaticResource UserInfoStyle}" Text="{Binding FirstName}" />
             </StackPanel>
             
             <StackPanel Grid.Row="0">

@@ -67,6 +67,20 @@ namespace Kuhlschrank
             }
         }
 
+        private string _previousType;
+        public string PreviousType
+        {
+            get { return _previousType; }
+            set
+            {
+                if (_previousType != value)
+                {
+                    _previousType = value;
+                    NotifyPropertyChanged("PreviousType");
+                }
+            }
+        }
+
         private bool _isLogged;
         public bool IsLogged
         {
@@ -121,9 +135,8 @@ namespace Kuhlschrank
 
             this.CloseCommand = new DelegateCommand(CloseApp, canClose);
             this.PreviousCommand = new DelegateCommand(LoadPrevious, canLoadPrevious);
-            this.PreviousButton.Visibility = System.Windows.Visibility.Collapsed;
+            this.PreviousView = null;
             this.IsLogged = false;
-            this.UserInfos.Visibility = Visibility.Collapsed;
 
             LoginView lv = new LoginView(Context);
             this.StackContent.Children.Add(lv);
@@ -202,25 +215,12 @@ namespace Kuhlschrank
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(string p)
         {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(p));
+
             if (p == "PreviousView")
-            {
-                if (PreviousView != null && !(PreviousView is LoginView))
-                    this.PreviousButton.Visibility = System.Windows.Visibility.Visible;
-                else
-                    this.PreviousButton.Visibility = System.Windows.Visibility.Collapsed;
-            }
-            if (p == "IsLogged")
-            {
-                if (IsLogged)
-                    this.UserInfos.Visibility = Visibility.Visible;
-                else
-                    this.UserInfos.Visibility = Visibility.Collapsed;
-            }
-            if (p == "Name" || p == "FirstName")
-            {
-                this.FirstNameField.Text = this.FirstName;
-                this.NameField.Text = this.Name.ToUpper();
-            }
+                if (this.PreviousView != null)
+                    this.PreviousType = this.PreviousView.GetType().ToString();
         }
         #endregion
     }

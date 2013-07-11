@@ -62,6 +62,7 @@
     <Content Include="Category.svc" />
     <Content Include="Device.svc" />
     <Content Include="Product.svc" />
+    <Content Include="Recette.svc" />
     <Content Include="User.svc" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

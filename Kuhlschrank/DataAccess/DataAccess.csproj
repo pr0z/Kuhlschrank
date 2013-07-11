@@ -52,6 +52,9 @@
     <Compile Include="ProductRepositoriesImplementation\ProductListRepository.cs" />
     <Compile Include="ProductRepositoriesImplementation\ProductServiceRepository.cs" />
     <Compile Include="ProductRepositoriesImplementation\ProductSqlServerRepository.cs" />
+    <Compile Include="RecetteRepositoriesImplementation\RecetteListRepository.cs" />
+    <Compile Include="RecetteRepositoriesImplementation\RecetteServiceRepository.cs" />
+    <Compile Include="RecetteRepositoriesImplementation\RecetteSqlServerRepository.cs" />
     <Compile Include="Service References\CategoryService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -63,6 +66,16 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service References\ProductService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RecetteService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserProductService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -91,7 +104,9 @@
     <None Include="Properties\DataSources\DataContracts.Category.datasource" />
     <None Include="Properties\DataSources\DataContracts.Device.datasource" />
     <None Include="Properties\DataSources\DataContracts.Product.datasource" />
+    <None Include="Properties\DataSources\DataContracts.Recette.datasource" />
     <None Include="Properties\DataSources\DataContracts.User.datasource" />
+    <None Include="Properties\DataSources\DataContracts.UserProducts.datasource" />
     <None Include="Service References\CategoryService\Category.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -122,6 +137,29 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ProductService\ProductService.wsdl" />
+    <None Include="Service References\RecetteService\Recette.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RecetteService\Recette1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RecetteService\Recette2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RecetteService\Recette3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RecetteService\RecetteService.wsdl" />
+    <None Include="Service References\UserProductService\UserProduct.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserProductService\UserProduct1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserProductService\UserProduct2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserProductService\UserProductService.wsdl" />
     <None Include="Service References\UserService\User.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -134,6 +172,10 @@
     <None Include="Service References\UserService\UserService.wsdl" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{27b71ef8-a053-44a8-a149-8353e31d6e51}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{365ee04a-7955-463b-82dd-30249383c609}</Project>
       <Name>Common</Name>
@@ -147,6 +189,8 @@
     <WCFMetadataStorage Include="Service References\CategoryService\" />
     <WCFMetadataStorage Include="Service References\DeviceService\" />
     <WCFMetadataStorage Include="Service References\ProductService\" />
+    <WCFMetadataStorage Include="Service References\RecetteService\" />
+    <WCFMetadataStorage Include="Service References\UserProductService\" />
     <WCFMetadataStorage Include="Service References\UserService\" />
   </ItemGroup>
   <ItemGroup>
@@ -205,6 +249,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\CategoryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserProductService\UserProduct.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserProductService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserProductService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserProductService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RecetteService\Recette.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RecetteService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RecetteService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RecetteService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

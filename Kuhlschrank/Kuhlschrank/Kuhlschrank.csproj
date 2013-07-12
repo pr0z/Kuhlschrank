@@ -30,7 +30,7 @@
     <PublisherName>Kuhlschrank Company</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>iisstart.htm</WebPage>
-    <ApplicationRevision>21</ApplicationRevision>
+    <ApplicationRevision>24</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -60,10 +60,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>FDE0B8AB688D64BE13017D7A2EAFC44492C62D38</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>6E7F8EC97538A890BFE854401F6828C0BAA543AA</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Kuhlschrank_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Kuhlschrank_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -78,7 +78,7 @@
     <ApplicationIcon>kBig.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>
@@ -215,7 +215,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Kuhlschrank_TemporaryKey.pfx" />
+    <None Include="Kuhlschrank_1_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\DataSources\DataContracts.User.datasource" />
     <None Include="Properties\Settings.settings">

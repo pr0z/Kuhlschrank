@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Category.svc" />
+    <Content Include="UserProducts.svc" />
     <Content Include="Device.svc" />
     <Content Include="Product.svc" />
     <Content Include="Recette.svc" />

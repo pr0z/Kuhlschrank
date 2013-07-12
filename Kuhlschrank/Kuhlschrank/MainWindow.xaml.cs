@@ -109,16 +109,16 @@ namespace Kuhlschrank
             }
         }
 
-        private string _name;
-        public string Name
+        private string _userName;
+        public string UserName
         {
-            get { return _name; }
+            get { return _userName; }
             set
             {
-                if (_name != value)
+                if (_userName != value)
                 {
-                    _name = value;
-                    NotifyPropertyChanged("Name");
+                    _userName = value;
+                    NotifyPropertyChanged("UserName");
                 }
             }
         }
@@ -204,6 +204,7 @@ namespace Kuhlschrank
         {
             if (PreviousView != null)
             {
+                this.PageTitle.Text = "";
                 this.StackContent.Children.Clear();
                 this.StackContent.Children.Add(_previousView);
                 this.PreviousView = null;

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1eb9c082-bcc4-4b09-873f-f8e213c4a208" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1966/UserProducts.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UserProductsService.wsdl" MetadataType="Wsdl" ID="300b4cf9-a8d0-4a67-be6d-85621a366efa" SourceId="1" SourceUrl="http://localhost:1966/UserProducts.svc?wsdl" />
+    <MetadataFile FileName="UserProducts.xsd" MetadataType="Schema" ID="f82786a8-5b7f-4e80-8ab9-185057e55fb0" SourceId="1" SourceUrl="http://localhost:1966/UserProducts.svc?xsd=xsd0" />
+    <MetadataFile FileName="UserProducts1.xsd" MetadataType="Schema" ID="67b8d5b0-fa05-48a4-97ae-792b92d5d444" SourceId="1" SourceUrl="http://localhost:1966/UserProducts.svc?xsd=xsd2" />
+    <MetadataFile FileName="UserProducts2.xsd" MetadataType="Schema" ID="048d49e3-78f6-4967-856b-7a40f199a883" SourceId="1" SourceUrl="http://localhost:1966/UserProducts.svc?xsd=xsd1" />
+    <MetadataFile FileName="UserProducts.disco" MetadataType="Disco" ID="327d987b-0247-4c3f-9935-66b6767029bc" SourceId="1" SourceUrl="http://localhost:1966/UserProducts.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

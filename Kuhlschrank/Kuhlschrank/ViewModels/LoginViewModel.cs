@@ -67,7 +67,7 @@ namespace Kuhlschrank.ViewModels
         {
             get
             {
-                return _userRepo ?? (_userRepo = new UserSqlServerRepository());
+                return _userRepo ?? (_userRepo = new UserServiceRepository());
             }
         }
         #endregion
@@ -121,7 +121,7 @@ namespace Kuhlschrank.ViewModels
             {
                 Context.ApplicationUser = user;
                 this.Context.HostWindow.IsLogged = true;
-                this.Context.HostWindow.Name = user.Nom;
+                this.Context.HostWindow.UserName = user.Nom.ToUpper();
                 this.Context.HostWindow.FirstName = user.Prenom;
 
                 MenuView menu = new MenuView(Context);

@@ -231,7 +231,7 @@ namespace Kuhlschrank.ViewModels
         {
             get
             {
-                return _categRepo ?? (_categRepo = new CategorySqlServerRepository());
+                return _categRepo ?? (_categRepo = new CategoryServiceRepository());
             }
         }
 
@@ -240,7 +240,7 @@ namespace Kuhlschrank.ViewModels
         {
             get
             {
-                return _productRepo ?? (_productRepo = new ProductSqlServerRepository());
+                return _productRepo ?? (_productRepo = new ProductServiceRepository());
             }
         }
 
@@ -249,7 +249,7 @@ namespace Kuhlschrank.ViewModels
         {
             get
             {
-                return _userProductsRepo ?? (_userProductsRepo = new UserProductsSqlServerRepository());
+                return _userProductsRepo ?? (_userProductsRepo = new UserProductsServiceRepository());
             }
         }
         #endregion
@@ -263,6 +263,7 @@ namespace Kuhlschrank.ViewModels
             this.MapProducts();
             this.Copy = new ObservableCollection<Pair<bool, Category>>();
 
+            this.Context.HostWindow.PageTitle.Text = "Explorer le contenu de votre réfrigérateur";
             this.SelectedItem = this.ListCategory.First();
         }
         #endregion

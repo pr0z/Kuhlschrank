@@ -79,14 +79,14 @@ namespace DataAccess.WebServices
         #endregion
 
         #region UserProductService
-        private static UserProductService.UserProductServiceClient _upsc;
-        public static UserProductService.UserProductServiceClient UserProductService
+        private static UserProductsService.UserProductsServiceClient _upsc;
+        public static UserProductsService.UserProductsServiceClient UserProductsService
         {
             get
             {
                 if (_upsc == null || !IsInGoodState(_upsc.State))
                 {
-                    _upsc = new UserProductService.UserProductServiceClient();
+                    _upsc = new UserProductsService.UserProductsServiceClient();
                     _upsc.Open();
                 }
                 return _upsc;

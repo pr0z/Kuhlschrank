@@ -52,6 +52,8 @@ namespace Kuhlschrank.ViewModels
         {
             if (this.PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+
+            this.Context.HostWindow.PageTitle.Text = "";
         }
 
         private ObservableCollection<TileModel> _tiles;

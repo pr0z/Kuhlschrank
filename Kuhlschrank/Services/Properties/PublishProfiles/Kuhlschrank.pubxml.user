@@ -10,26 +10,38 @@ en modifiant ce fichier MSBuild. Pour en savoir plus à ce sujet, consultez la p
     <LastUsedPlatform>Any CPU</LastUsedPlatform>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="bin/AForge.dll">
+      <publishTime>02/23/2012 19:13:42</publishTime>
+    </File>
+    <File Include="bin/AForge.Imaging.dll">
+      <publishTime>02/23/2012 19:13:46</publishTime>
+    </File>
+    <File Include="bin/AForge.Math.dll">
+      <publishTime>02/23/2012 19:13:44</publishTime>
+    </File>
+    <File Include="bin/Business.dll">
+      <publishTime>07/12/2013 02:01:33</publishTime>
+    </File>
     <File Include="bin/Common.dll">
-      <publishTime>07/08/2013 20:39:38</publishTime>
+      <publishTime>07/12/2013 02:01:32</publishTime>
     </File>
     <File Include="bin/Common.pdb">
       <publishTime>04/07/2013 14:12:57</publishTime>
     </File>
     <File Include="bin/DataAccess.dll">
-      <publishTime>07/08/2013 20:39:38</publishTime>
+      <publishTime>07/12/2013 03:05:37</publishTime>
     </File>
     <File Include="bin/DataAccess.pdb">
       <publishTime>07/04/2013 14:21:15</publishTime>
     </File>
     <File Include="bin/DataCommunication.dll">
-      <publishTime>07/08/2013 20:40:47</publishTime>
+      <publishTime>07/12/2013 03:22:13</publishTime>
     </File>
     <File Include="bin/DataCommunication.pdb">
       <publishTime>07/04/2013 14:21:15</publishTime>
     </File>
     <File Include="bin/DataContracts.dll">
-      <publishTime>07/08/2013 20:39:37</publishTime>
+      <publishTime>07/12/2013 02:01:32</publishTime>
     </File>
     <File Include="bin/DataContracts.pdb">
       <publishTime>04/07/2013 14:12:57</publishTime>
@@ -55,11 +67,14 @@ en modifiant ce fichier MSBuild. Pour en savoir plus à ce sujet, consultez la p
     <File Include="bin/ko/System.Windows.Interactivity.resources.dll">
       <publishTime>02/18/2013 14:50:46</publishTime>
     </File>
+    <File Include="bin/OnBarcode.Barcode.BarcodeScanner.dll">
+      <publishTime>05/14/2013 04:23:46</publishTime>
+    </File>
     <File Include="bin/ru/System.Windows.Interactivity.resources.dll">
       <publishTime>02/18/2013 14:58:20</publishTime>
     </File>
     <File Include="bin/Services.dll">
-      <publishTime>07/08/2013 20:40:47</publishTime>
+      <publishTime>07/12/2013 03:22:13</publishTime>
     </File>
     <File Include="bin/Services.pdb">
       <publishTime>07/04/2013 14:21:15</publishTime>
@@ -74,19 +89,25 @@ en modifiant ce fichier MSBuild. Pour en savoir plus à ce sujet, consultez la p
       <publishTime>02/18/2013 15:01:34</publishTime>
     </File>
     <File Include="Category.svc">
-      <publishTime>07/06/2013 17:07:05</publishTime>
+      <publishTime>06/07/2013 17:07:05</publishTime>
     </File>
     <File Include="Device.svc">
-      <publishTime>06/07/2013 10:41:21</publishTime>
+      <publishTime>07/06/2013 10:41:21</publishTime>
     </File>
     <File Include="Product.svc">
-      <publishTime>06/07/2013 10:41:21</publishTime>
+      <publishTime>07/06/2013 10:41:21</publishTime>
+    </File>
+    <File Include="Recette.svc">
+      <publishTime>07/12/2013 00:51:54</publishTime>
     </File>
     <File Include="User.svc">
-      <publishTime>06/07/2013 10:41:21</publishTime>
+      <publishTime>07/06/2013 10:41:21</publishTime>
+    </File>
+    <File Include="UserProducts.svc">
+      <publishTime>07/12/2013 02:41:25</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/07/2013 22:07:33</publishTime>
+      <publishTime>07/12/2013 03:10:22</publishTime>
     </File>
   </ItemGroup>
 </Project>

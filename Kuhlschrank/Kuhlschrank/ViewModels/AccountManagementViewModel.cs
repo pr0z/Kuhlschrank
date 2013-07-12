@@ -11,6 +11,8 @@ using Common.Repositories.UserRepository;
 using DataAccess.UserRepositoriesImplementation;
 using Common.Repositories.DeviceRepository;
 using DataAccess.DeviceRepositoriesImplementation;
+using System.Collections.ObjectModel;
+using Common.Extensions;
 
 namespace Kuhlschrank.ViewModels
 {
@@ -73,22 +75,50 @@ namespace Kuhlschrank.ViewModels
             }
         }
 
-        private string _userPassword;
-        public string UserPassword
+        private bool _fNameEnabled;
+        public bool FNameEnabled
         {
-            get { return _userPassword; }
+            get { return _fNameEnabled; }
             set
             {
-                if (_userPassword != value)
+                if (_fNameEnabled != value)
                 {
-                    _userPassword = value;
-                    NotifyPropertyChanged("UserPassword");
+                    _fNameEnabled = value;
+                    NotifyPropertyChanged("FNameEnabled");
                 }
             }
         }
 
-        private List<Device> _listDevices;
-        public List<Device> ListDevices
+        private bool _nameEnabled;
+        public bool NameEnabled
+        {
+            get { return _nameEnabled; }
+            set
+            {
+                if (_nameEnabled != value)
+                {
+                    _nameEnabled = value;
+                    NotifyPropertyChanged("NameEnabled");
+                }
+            }
+        }
+
+        private bool _mailEnabled;
+        public bool MailEnabled
+        {
+            get { return _mailEnabled; }
+            set
+            {
+                if (_mailEnabled != value)
+                {
+                    _mailEnabled = value;
+                    NotifyPropertyChanged("MailEnabled");
+                }
+            }
+        }
+
+        private ObservableCollection<Device> _listDevices;
+        public ObservableCollection<Device> ListDevices
         {
             get { return _listDevices; }
             set
@@ -121,16 +151,59 @@ namespace Kuhlschrank.ViewModels
 		#endregion
 
 		#region COMMANDS
-        private DelegateCommand _clickCommand;
-        public DelegateCommand ClickCommand
+        private DelegateCommand _updateFirstNameCommand;
+        public DelegateCommand UpdateFirstNameCommand
         {
-            get { return _clickCommand; }
+            get { return _updateFirstNameCommand; }
             set
             {
-                if (_clickCommand != value)
+                if (_updateFirstNameCommand != value)
                 {
-                    _clickCommand = value;
-                    NotifyPropertyChanged("ClickCommand");
+                    _updateFirstNameCommand = value;
+                    NotifyPropertyChanged("UpdateFirstNameCommand");
+                }
+            }
+        }
+
+        private DelegateCommand _updateNameCommand;
+        public DelegateCommand UpdateNameCommand
+        {
+            get { return _updateNameCommand; }
+            set
+            {
+                if (_updateNameCommand != value)
+                {
+                    _updateNameCommand = value;
+                    NotifyPropertyChanged("UpdateNameCommand");
+                }
+            }
+        }
+
+        private DelegateCommand _updateMailCommand;
+        public DelegateCommand UpdateMailCommand
+        {
+            get { return _updateMailCommand; }
+            set
+            {
+                if (_updateMailCommand != value)
+                {
+                    _updateMailCommand = value;
+                    NotifyPropertyChanged("MailNameCommand");
+                }
+            }
+        }
+
+        
+        private DelegateCommand _saveCommand;
+        public DelegateCommand SaveCommand
+        {
+            get { return _saveCommand; }
+            set
+            {
+                if (_saveCommand != value)
+                {
+                    _saveCommand = value;
+                    NotifyPropertyChanged("SaveCommand");
                 }
             }
         }
@@ -139,25 +212,80 @@ namespace Kuhlschrank.ViewModels
 		#region CTOR
         public AccountManagementViewModel(ApplicationContext context)
         {
-            this.ClickCommand = new DelegateCommand(ClickAction, canClick);
+            this.UpdateFirstNameCommand = new DelegateCommand(UpdateFirstNameAction, canUpdateFirstName);
+            this.UpdateNameCommand = new DelegateCommand(UpdateNameAction, canUpdateName);
+            this.UpdateMailCommand = new DelegateCommand(UpdateMailAction, canUpdateMail);
+            this.SaveCommand = new DelegateCommand(SaveAction, canSave);
 			this.Context = context;
             this.UserName = this.Context.ApplicationUser.Nom;
             this.UserFirstName = this.Context.ApplicationUser.Prenom;
             this.UserMail = this.Context.ApplicationUser.Mail;
-            this.UserPassword = this.Context.ApplicationUser.Password;
-            this.ListDevices = this.DeviceRepo.GetByUserId(this.Context.ApplicationUser.ID);
+            this.ListDevices = this.DeviceRepo.GetByUserId(this.Context.ApplicationUser.ID).ToObservableCollection();
+            this.FNameEnabled = false;
+            this.MailEnabled = false;
+            this.NameEnabled = false;
+            this.Context.HostWindow.PageTitle.Text = "Gérer votre compte";
         }
         #endregion
 
 		#region ACTIONS AND CANEXECUTES
-        private bool canClick()
+        private bool canUpdateFirstName()
         {
+            return true;
+        }
+
+        private void UpdateFirstNameAction()
+        {
+            this.FNameEnabled = true;
+        }
+
+        private bool canUpdateName()
+        {
+            return true;
+        }
+
+        private void UpdateNameAction()
+        {
+            this.NameEnabled = true;
+        }
+
+        private bool canUpdateMail()
+        {
+            return true;
+        }
+
+        private void UpdateMailAction()
+        {
+            this.MailEnabled = true;
+        }
+
+        private bool canSave()
+        {
+            if (NameEnabled)
+                return true;
+
+            if (MailEnabled)
+                return true;
+
+            if (FNameEnabled)
+                return true;
+
             return false;
         }
 
-        private void ClickAction()
+        private void SaveAction()
         {
-            
+            User user = new User();
+            user.Mail = this.UserMail;
+            user.Nom = this.UserName;
+            user.Prenom = this.UserFirstName;
+            user.ID = this.Context.ApplicationUser.ID;
+            user.Password = this.Context.ApplicationUser.Password;
+            UserRepo.Update(user);
+
+            this.Context.ApplicationUser = user;
+            this.Context.HostWindow.UserName = user.Nom.ToUpper();
+            this.Context.HostWindow.FirstName = user.Prenom;
         }
 		#endregion
 
@@ -167,6 +295,9 @@ namespace Kuhlschrank.ViewModels
         {
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+
+            if (this.SaveCommand != null)
+                this.SaveCommand.RaiseCanExecuteChanged();
         }
         #endregion
 	}

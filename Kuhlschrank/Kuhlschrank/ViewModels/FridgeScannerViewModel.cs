@@ -85,7 +85,7 @@ namespace Kuhlschrank.ViewModels
         {
             get
             {
-                return _productRepo ?? (_productRepo = new ProductSqlServerRepository());
+                return _productRepo ?? (_productRepo = new ProductServiceRepository());
             }
         }
         private IUserProductsRepository _userProductsRepo;
@@ -93,7 +93,7 @@ namespace Kuhlschrank.ViewModels
         {
             get
             {
-                return _userProductsRepo ?? (_userProductsRepo = new UserProductsSqlServerRepository());
+                return _userProductsRepo ?? (_userProductsRepo = new UserProductsServiceRepository());
             }
         }
         #endregion
@@ -138,6 +138,8 @@ namespace Kuhlschrank.ViewModels
             this.Context = context;
             this.RecognizedProducts = new List<Product>();
             this.LoadVisible = false;
+
+            this.Context.HostWindow.PageTitle.Text = "Analyser le contenu de votre réfrigérateur";
         }
         #endregion
 

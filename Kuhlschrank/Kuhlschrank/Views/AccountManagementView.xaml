@@ -17,54 +17,63 @@
           x:Key="SmartPhone"
           UriSource="/Common;component/Images/smartphone-icon.png" />
 
+    <BitmapImage
+          x:Key="Edit"
+          UriSource="/Common;component/Images/edit-icon.png" />
+
     <Style TargetType="TextBlock" x:Key="TextBlockStyle">
       <Setter Value="15" Property="FontSize" />
       <Setter Value="Bold" Property="FontWeight" />
       <Setter Value="0,15,0,0" Property="Margin" />
-      <Setter Value="190" Property="Width" />
+      <Setter Value="120" Property="Width" />
     </Style>
 
     <Style TargetType="TextBox" x:Key="TextBoxStyle">
       <Setter Value="15" Property="FontSize" />
       <Setter Value="Bold" Property="FontWeight" />
       <Setter Value="0,15,0,0" Property="Margin" />
-      <Setter Value="600" Property="Width" />
+      <Setter Value="300" Property="Width" />
       <Setter Value="30" Property="Height" />
+    </Style>
+    
+    <Style TargetType="Button" x:Key="ButtonStyle">
+      <Setter Property="Width" Value="32" />
+      <Setter Property="Height" Value="32" />
+      <Setter Property="Margin" Value="0,15,0,0" />
     </Style>
 
     <DataTemplate x:Key="UserDataTemplate">
       <Border
         Margin="5,5,5,5"
-        Height="170"
-        Width="170"
+        Height="100"
+        Width="100"
         CornerRadius="6"
         BorderBrush="Black"
         BorderThickness="2">
         <StackPanel
-          Height="170"
-          Width="170"
+          Height="100"
+          Width="100"
           Orientation="Vertical">
           <StackPanel.Background>
             <SolidColorBrush Color="Black" Opacity="0.4" />
           </StackPanel.Background>
           <Image
-            Width="100"
-            Height="100"
-            x:Name="ProductImage"
+            Width="40"
+            Height="40"
             Source="{StaticResource SmartPhone}"
             VerticalAlignment="Top" 
             HorizontalAlignment="Center" />
           <TextBlock 
-            Margin="0,10,0,0"
-            FontSize="18"
-            Width="130"
+            Margin="0,5,0,0"
+            FontSize="12"
+            Width="90"
             Height="50"
             FontWeight="Bold"
             TextWrapping="Wrap"
             TextAlignment="Center"
             VerticalAlignment="Bottom"
             HorizontalAlignment="Center"
-            Text="{Binding Libelle}" />
+            Text="{Binding type}" />
         </StackPanel>
       </Border>
     </DataTemplate>
@@ -78,29 +87,17 @@
     </Grid.ColumnDefinitions>
 
     <StackPanel
-      Margin="20,0,0,0"
       Height="800"
       Grid.Column="0">
       <StackPanel.Background>
         <SolidColorBrush Color="Black" Opacity="0.4" />
       </StackPanel.Background>
-      <ListView
-        BorderBrush="Transparent"
-        Background="Transparent">
-        <ListViewItem>
-          <StackPanel
-             VerticalAlignment="Center"
-             Orientation="Vertical"
-             Height="50">
-            <TextBlock
-              Grid.Column="0"
+      <TextBlock
+              Margin="20,10,0,0"
               VerticalAlignment="Center"
               Text="Votre compte"
               FontSize="18"
               FontWeight="Bold"/>
-          </StackPanel>
-        </ListViewItem>
-      </ListView>
     </StackPanel>
 
     <StackPanel
@@ -125,10 +122,10 @@
           <StackPanel>
             <Grid>
               <Grid.RowDefinitions>
-                <RowDefinition Height="25*" />
-                <RowDefinition Height="25*" />
-                <RowDefinition Height="25*" />
-                <RowDefinition Height="25*" />
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="10*" />
               </Grid.RowDefinitions>
               
               <StackPanel
@@ -150,12 +147,14 @@
                     Style="{StaticResource TextBoxStyle}"
                     Grid.Column="1"
                     Text="{Binding UserFirstName}"
-                    IsEnabled="False" />
-                  
+                    IsEnabled="{Binding FNameEnabled}" />
+
                   <Button
+                    Command="{Binding UpdateFirstNameCommand, Mode=TwoWay}"
                     Grid.Column="2"
-                    Width="16"
-                    Height="16" />
+                    Style="{StaticResource ButtonStyle}" >
+                    <Image Source="{StaticResource Edit}" />
+                  </Button>
                 </Grid>
               </StackPanel>
 
@@ -178,12 +177,14 @@
                     Style="{StaticResource TextBoxStyle}"
                     Grid.Column="1"
                     Text="{Binding UserName}"
-                    IsEnabled="False" />
+                    IsEnabled="{Binding NameEnabled}" />
 
                   <Button
                     Grid.Column="2"
-                    Width="16"
-                    Height="16" />
+                    Command="{Binding UpdateNameCommand, Mode=TwoWay}"
+                    Style="{StaticResource ButtonStyle}" >
+                    <Image Source="{StaticResource Edit}" />
+                  </Button>
                 </Grid>
               </StackPanel>
 
@@ -206,40 +207,34 @@
                     Style="{StaticResource TextBoxStyle}"
                     Grid.Column="1"
                     Text="{Binding UserMail}"
-                    IsEnabled="False" />
+                    IsEnabled="{Binding MailEnabled, Mode=TwoWay}" />
 
                   <Button
+                    Command="{Binding UpdateMailCommand}"
                     Grid.Column="2"
-                    Width="16"
-                    Height="16" />
+                    Style="{StaticResource ButtonStyle}" >
+                    <Image Source="{StaticResource Edit}" />
+                  </Button>
                 </Grid>
               </StackPanel>
-
-              <StackPanel          
-                Grid.Row="3" >
+              
+              <StackPanel
+                Grid.Row="3">
                 <Grid>
                   <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="30*" />
-                    <ColumnDefinition Width="60*" />
-                    <ColumnDefinition Width="10*" />
+                    <ColumnDefinition Width="50*" />
+                    <ColumnDefinition Width="50*" />
                   </Grid.ColumnDefinitions>
-
-                  <TextBlock
-                    Style="{StaticResource TextBlockStyle}"
-                    Grid.Column="0"
-                    Text="Votre mot passe :"
-                    HorizontalAlignment="Left" />
-
-                  <TextBox
-                    Style="{StaticResource TextBoxStyle}"
-                    Grid.Column="1"
-                    Text="{Binding UserPassword}"
-                    IsEnabled="False" />
-
-                  <Button
-                    Grid.Column="2"
-                    Width="16"
-                    Height="16" />
+                  
+                  <StackPanel
+                    Grid.Column="1">
+                    <Button
+                      Margin="152,10,0,0"
+                      Width="80"
+                      Height="25"
+                      Command="{Binding SaveCommand}"
+                      Content="Enregistrer" />
+                  </StackPanel>
                 </Grid>
               </StackPanel>
               
@@ -251,7 +246,7 @@
         <StackPanel
           Margin="0,20,0,0"
           Width="500"
-          Grid.Row="0">
+          Grid.Row="1">
           <StackPanel>
             <Grid>
               <Grid.RowDefinitions>
@@ -268,7 +263,11 @@
               <StackPanel
                 Grid.Row="1" 
                 Orientation="Horizontal">
-                <ItemsControl ItemTemplate="{StaticResource UserDataTemplate}" ItemsSource="{Binding ListDevices}" VerticalAlignment="Top" Height="500">
+                <ItemsControl 
+                  ItemTemplate="{StaticResource UserDataTemplate}" 
+                  ItemsSource="{Binding ListDevices}"
+                  VerticalAlignment="Top" 
+                  Height="120">
                   <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                       <VirtualizingStackPanel Orientation="Horizontal"/>

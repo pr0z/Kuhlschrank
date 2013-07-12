@@ -10,7 +10,7 @@ namespace DataCommunication.CategoryService
 {
     public class CategoryService : ICategoryService
     {
-        private ICategoryRepository _repo = new CategoryListRepository();
+        private ICategoryRepository _repo = new CategorySqlServerRepository();
 
         public DataContracts.Category GetById(int id)
         {

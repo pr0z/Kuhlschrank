@@ -75,7 +75,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service References\UserProductService\Reference.cs">
+    <Compile Include="Service References\UserProductsService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -150,16 +150,16 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\RecetteService\RecetteService.wsdl" />
-    <None Include="Service References\UserProductService\UserProduct.xsd">
+    <None Include="Service References\UserProductsService\UserProducts.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserProductService\UserProduct1.xsd">
+    <None Include="Service References\UserProductsService\UserProducts1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserProductService\UserProduct2.xsd">
+    <None Include="Service References\UserProductsService\UserProducts2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\UserProductService\UserProductService.wsdl" />
+    <None Include="Service References\UserProductsService\UserProductsService.wsdl" />
     <None Include="Service References\UserService\User.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -190,7 +190,7 @@
     <WCFMetadataStorage Include="Service References\DeviceService\" />
     <WCFMetadataStorage Include="Service References\ProductService\" />
     <WCFMetadataStorage Include="Service References\RecetteService\" />
-    <WCFMetadataStorage Include="Service References\UserProductService\" />
+    <WCFMetadataStorage Include="Service References\UserProductsService\" />
     <WCFMetadataStorage Include="Service References\UserService\" />
   </ItemGroup>
   <ItemGroup>
@@ -254,21 +254,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\UserProductService\UserProduct.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\UserProductService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\UserProductService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\UserProductService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\RecetteService\Recette.disco" />
   </ItemGroup>
   <ItemGroup>
@@ -279,6 +264,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\RecetteService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserProductsService\UserProducts.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserProductsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserProductsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserProductsService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

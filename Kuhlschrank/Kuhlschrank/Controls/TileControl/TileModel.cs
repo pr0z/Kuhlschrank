@@ -67,6 +67,12 @@ namespace Kuhlschrank.Controls
                         this.Context.HostWindow.SetView(account);
                     }
                     break;
+                case TileIdentity.Recipes:
+                    {
+                        RecipesView recipe = new RecipesView(this.Context);
+                        this.Context.HostWindow.SetView(recipe);
+                    }
+                    break;
                 default:
                     break;
             }

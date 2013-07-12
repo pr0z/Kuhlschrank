@@ -30,6 +30,7 @@ namespace Common.Converters
                 case TileType.Browser: brush.Color = Colors.BlueViolet; break;
                 case TileType.Application: brush.Color = Colors.DodgerBlue; break;
                 case TileType.Website: brush.Color = Colors.DarkGoldenrod; break;
+                case TileType.Tile: brush.Color = Colors.ForestGreen; break;
             }
             return brush;
         }

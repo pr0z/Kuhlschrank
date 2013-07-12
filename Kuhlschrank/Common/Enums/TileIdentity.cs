@@ -13,6 +13,7 @@ namespace Common.Enums
     {
         ScanContent,
         ExploreContent,
-        Settings
+        Settings,
+        Recipes
     }
 }

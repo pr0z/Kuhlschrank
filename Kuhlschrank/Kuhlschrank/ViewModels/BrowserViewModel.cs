@@ -153,6 +153,20 @@ namespace Kuhlschrank.ViewModels
             }
         }
 
+        private ObservableCollection<Product> _listSauces;
+        public ObservableCollection<Product> ListSauces
+        {
+            get { return _listSauces; }
+            set
+            {
+                if (_listSauces != value)
+                {
+                    _listSauces = value;
+                    NotifyPropertyChanged("ListSauces");
+                }
+            }
+        }
+
         private Pair<bool, Category> _selectedItem;
         public Pair<bool, Category> SelectedItem
         {
@@ -226,6 +240,20 @@ namespace Kuhlschrank.ViewModels
             }
         }
 
+        private bool _saucesEnabled;
+        public bool SaucesEnabled
+        {
+            get { return _saucesEnabled; }
+            set
+            {
+                if (_saucesEnabled != value)
+                {
+                    _saucesEnabled = value;
+                    NotifyPropertyChanged("SaucesEnabled");
+                }
+            }
+        }
+
         private ICategoryRepository _categRepo;
         public ICategoryRepository CategRepo
         {
@@ -279,6 +307,7 @@ namespace Kuhlschrank.ViewModels
             this.ListMilkProducts = this.AllProducts.Where(o => o.IdCategory == 2).ToList().ToObservableCollection();
             this.ListVegetables = this.AllProducts.Where(o => o.IdCategory == 3).ToList().ToObservableCollection();
             this.ListMeats = this.AllProducts.Where(o => o.IdCategory == 4).ToList().ToObservableCollection();
+            this.ListSauces = this.AllProducts.Where(o => o.IdCategory == 5).ToList().ToObservableCollection();
         }
         #endregion
 
@@ -328,6 +357,11 @@ namespace Kuhlschrank.ViewModels
                     MeatEnabled = true;
                 else
                     MeatEnabled = false;
+
+                if (SelectedItem.Second.ID == 4)
+                    SaucesEnabled = true;
+                else
+                    SaucesEnabled = false;
             }
         }
         #endregion

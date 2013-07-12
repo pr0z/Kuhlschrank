@@ -136,7 +136,7 @@ namespace Kuhlschrank.ViewModels
         {
             get
             {
-                return _userRepo ?? (_userRepo = new UserSqlServerRepository());
+                return _userRepo ?? (_userRepo = new UserServiceRepository());
             }
         }
 
@@ -145,7 +145,7 @@ namespace Kuhlschrank.ViewModels
         {
             get
             {
-                return _deviceRepo ?? (_deviceRepo = new DeviceSqlServerRepository());
+                return _deviceRepo ?? (_deviceRepo = new DeviceServiceRepository());
             }
         }
 		#endregion

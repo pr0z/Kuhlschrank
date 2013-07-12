@@ -118,7 +118,7 @@
                   <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <StackPanel Grid.Row="0" VerticalAlignment="Center" Orientation="Vertical" Margin="-30,0,0,0">
+                <StackPanel Grid.Row="0" VerticalAlignment="Center" Orientation="Vertical" Margin="-50,0,0,0">
                   <TextBlock Style="{StaticResource UserInfoStyle}" Text="{Binding FirstName}" />
                   <TextBlock Style="{StaticResource UserInfoStyle}" Text="{Binding UserName}" />
                 </StackPanel>

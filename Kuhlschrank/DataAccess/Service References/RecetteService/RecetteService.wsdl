@@ -129,7 +129,7 @@
   </wsdl:binding>
   <wsdl:service name="RecetteService">
     <wsdl:port name="BasicHttpBinding_IRecetteService" binding="tns:BasicHttpBinding_IRecetteService">
-      <soap:address location="http://localhost:1966/Recette.svc" />
+      <soap:address location="http://localhost:1966/Recette.svc/win" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

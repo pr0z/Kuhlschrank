@@ -13,6 +13,7 @@ namespace Common.Enums
     {
         Browser,
         Website,
-        Application
+        Application,
+        Tile
     }
 }

@@ -11,7 +11,7 @@ namespace DataCommunication.RecetteService
 {
     public class RecetteService : IRecetteService
     {
-        IRecetteRepository _repo = new RecetteListRepository();
+        IRecetteRepository _repo = new RecetteSqlServerRepository();
 
         #region IRecetteService Membres
 

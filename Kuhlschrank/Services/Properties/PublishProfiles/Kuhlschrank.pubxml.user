@@ -20,22 +20,22 @@ en modifiant ce fichier MSBuild. Pour en savoir plus à ce sujet, consultez la p
       <publishTime>02/23/2012 19:13:44</publishTime>
     </File>
     <File Include="bin/Business.dll">
-      <publishTime>07/12/2013 02:01:33</publishTime>
+      <publishTime>07/12/2013 05:57:45</publishTime>
     </File>
     <File Include="bin/Common.dll">
-      <publishTime>07/12/2013 02:01:32</publishTime>
+      <publishTime>07/12/2013 06:23:43</publishTime>
     </File>
     <File Include="bin/Common.pdb">
       <publishTime>04/07/2013 14:12:57</publishTime>
     </File>
     <File Include="bin/DataAccess.dll">
-      <publishTime>07/12/2013 03:05:37</publishTime>
+      <publishTime>07/12/2013 06:36:04</publishTime>
     </File>
     <File Include="bin/DataAccess.pdb">
       <publishTime>07/04/2013 14:21:15</publishTime>
     </File>
     <File Include="bin/DataCommunication.dll">
-      <publishTime>07/12/2013 03:22:13</publishTime>
+      <publishTime>07/12/2013 06:36:05</publishTime>
     </File>
     <File Include="bin/DataCommunication.pdb">
       <publishTime>07/04/2013 14:21:15</publishTime>
@@ -74,7 +74,7 @@ en modifiant ce fichier MSBuild. Pour en savoir plus à ce sujet, consultez la p
       <publishTime>02/18/2013 14:58:20</publishTime>
     </File>
     <File Include="bin/Services.dll">
-      <publishTime>07/12/2013 03:22:13</publishTime>
+      <publishTime>07/12/2013 06:36:05</publishTime>
     </File>
     <File Include="bin/Services.pdb">
       <publishTime>07/04/2013 14:21:15</publishTime>
@@ -98,7 +98,7 @@ en modifiant ce fichier MSBuild. Pour en savoir plus à ce sujet, consultez la p
       <publishTime>07/06/2013 10:41:21</publishTime>
     </File>
     <File Include="Recette.svc">
-      <publishTime>07/12/2013 00:51:54</publishTime>
+      <publishTime>07/12/2013 06:20:39</publishTime>
     </File>
     <File Include="User.svc">
       <publishTime>07/06/2013 10:41:21</publishTime>
@@ -107,7 +107,7 @@ en modifiant ce fichier MSBuild. Pour en savoir plus à ce sujet, consultez la p
       <publishTime>07/12/2013 02:41:25</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/12/2013 03:10:22</publishTime>
+      <publishTime>07/12/2013 06:30:21</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -60,10 +60,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>6E7F8EC97538A890BFE854401F6828C0BAA543AA</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>8C5338E651A22CF4A3E9929B7AAEA85FCAA58E91</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Kuhlschrank_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Kuhlschrank_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -224,6 +224,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Kuhlschrank_1_TemporaryKey.pfx" />
+    <None Include="Kuhlschrank_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\DataSources\DataContracts.User.datasource" />
     <None Include="Properties\Settings.settings">

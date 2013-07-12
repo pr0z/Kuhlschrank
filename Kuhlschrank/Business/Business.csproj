@@ -30,34 +30,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AForge, Version=2.2.4.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Dropbox\Projets 4AL\PROJET ANNUEL\dll\AForge.dll</HintPath>
+    <Reference Include="AForge">
+      <HintPath>..\packages\AForge.2.2.4\lib\AForge.dll</HintPath>
     </Reference>
-    <Reference Include="AForge.Imaging, Version=2.2.4.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Dropbox\Projets 4AL\PROJET ANNUEL\dll\AForge.Imaging.dll</HintPath>
+    <Reference Include="AForge.Imaging">
+      <HintPath>..\packages\AForge.Imaging.2.2.4\lib\AForge.Imaging.dll</HintPath>
     </Reference>
-    <Reference Include="AForge.Math, Version=2.2.4.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Dropbox\Projets 4AL\PROJET ANNUEL\dll\AForge.Math.dll</HintPath>
+    <Reference Include="AForge.Math">
+      <HintPath>..\packages\AForge.Math.2.2.4\lib\AForge.Math.dll</HintPath>
     </Reference>
-    <Reference Include="OnBarcode.Barcode.BarcodeScanner">
-      <HintPath>..\..\..\..\..\Dropbox\Projets 4AL\PROJET ANNUEL\dll\OnBarcode.Barcode.BarcodeScanner.dll</HintPath>
-      <HintPath>C:\Users\Ben-j\Dropbox\Projets 4AL\PROJET ANNUEL\dll\AForge.dll</HintPath>
+    <Reference Include="AForge.Video">
+      <HintPath>..\packages\AForge.Video.2.2.4\lib\AForge.Video.dll</HintPath>
     </Reference>
-    <Reference Include="AForge.Imaging, Version=2.2.4.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\Ben-j\Dropbox\Projets 4AL\PROJET ANNUEL\dll\AForge.Imaging.dll</HintPath>
-    </Reference>
-    <Reference Include="AForge.Math, Version=2.2.4.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\Ben-j\Dropbox\Projets 4AL\PROJET ANNUEL\dll\AForge.Math.dll</HintPath>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.4.1\lib\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
     <Reference Include="OnBarcode.Barcode.BarcodeScanner">
       <HintPath>C:\Users\Ben-j\Dropbox\Projets 4AL\PROJET ANNUEL\dll\OnBarcode.Barcode.BarcodeScanner.dll</HintPath>
     </Reference>
+    <Reference Include="OnBarcode.Barcode.BarcodeScanner">
+      <HintPath>..\..\..\..\..\Dropbox\Projets 4AL\PROJET ANNUEL\dll\OnBarcode.Barcode.BarcodeScanner.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
@@ -68,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BarCodeAnalyser\BarCodeAnalyser.cs" />
+    <Compile Include="CamCapturer\CamCapturer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecetteSelector\RecetteSelector.cs" />
     <Compile Include="ShapeDetectionEngine\ShapeDetectionEngine.cs" />
@@ -77,6 +73,9 @@
       <Project>{5d40519e-fa43-491d-a8dd-75c92339b814}</Project>
       <Name>DataContracts</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -32,8 +32,21 @@ namespace Business.ShapeDetectionEngine
         /// </summary>
         public ShapeDetectionEngine()
         {
-            Picture = (Bitmap)Bitmap.FromFile(@"C:\Users\RLEI\Pictures\Products\prod.jpg");
-            Copy = (Bitmap)Bitmap.FromFile(@"C:\Users\RLEI\Pictures\Products\prod.jpg");
+
+        }
+
+        /// <summary>
+        /// Méthode qui analyse les images envoyées par le client
+        /// Repère les formes présentes, les découpe et les enregistre en ficiers distincts
+        /// </summary>
+        public void ProcessImage()
+        {
+            using (CamCapturer.CamCapturer cam = new CamCapturer.CamCapturer())
+            {
+                Picture = cam.GetCapture();
+                Copy = cam.GetCapture();
+            }
+
             ShapeChecker = new SimpleShapeChecker();
             ShapeAnalyser = new BlobCounter();
             string date = DateTime.Now.Date.ToString("dMyyyy");
@@ -43,14 +56,7 @@ namespace Business.ShapeDetectionEngine
             ShapeAnalyser.MinHeight = 200;
             ShapeAnalyser.MinWidth = 500;
             Directory.CreateDirectory(Path.Combine(Path.GetTempPath(), FolderName));
-        }
 
-        /// <summary>
-        /// Méthode qui analyse les images envoyées par le client
-        /// Repère les formes présentes, les découpe et les enregistre en ficiers distincts
-        /// </summary>
-        public void ProcessImage()
-        {
             BitmapData bitData = Picture.LockBits(new Rectangle(0, 0, Picture.Width, Picture.Height), ImageLockMode.ReadWrite, Picture.PixelFormat);
 
             ColorFiltering filter = new ColorFiltering();
